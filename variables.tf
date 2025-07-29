@@ -5,7 +5,7 @@
 
 variable "intersight_api_key_id" {
   description = "Intersight API Key."
-  default = "66105049756461301e3e5e28/6843fe7b756461301e89f382/68464a0f756461301e89fb46"
+  default = "blah key"
   sensitive   = true
   type        = string
   validation {
@@ -15,7 +15,7 @@ variable "intersight_api_key_id" {
 }
 
 variable "intersight_secret_key" {
-  default     = "~\\git\\github.com\\rob-moss\\easy-imm-tccp\\romoss-tfkey-v2-SecretKey.txt"
+  default     = "key.file.location.txt"
   description = "Intersight Secret Key."
   sensitive   = true
   type        = string
