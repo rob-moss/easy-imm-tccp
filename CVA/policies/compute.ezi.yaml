@@ -2,7 +2,7 @@
 #=======================================
 #   Policies -> Compute - Variables
 #=======================================
-common:
+System:
   policies:
     bios:
       - baud_rate: '115200'

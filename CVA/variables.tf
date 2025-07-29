@@ -255,6 +255,7 @@ variable "binding_parameters_password" {
     condition     = length(regexall("^$|^[\\S]{8,254}$", var.binding_parameters_password)) > 0
     error_message = "Must match the following regular expression: ```^[\\S]{8,254}$```."
   }
+
 }
 
 #__________________________________________________________________

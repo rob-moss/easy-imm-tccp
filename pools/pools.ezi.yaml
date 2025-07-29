@@ -2,7 +2,7 @@
 #==================================
 #   Pools -> Pools - Variables
 #==================================
-common:
+System:
   pools:
     ip:
       - ipv4_blocks:

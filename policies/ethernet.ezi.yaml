@@ -2,7 +2,7 @@
 #========================================
 #   Policies -> Ethernet - Variables
 #========================================
-common:
+System:
   policies:
     ethernet_adapter:
       - adapter_template: Win-AzureStack

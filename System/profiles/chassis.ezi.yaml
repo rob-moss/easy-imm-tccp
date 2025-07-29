@@ -2,16 +2,16 @@
 #=======================================
 #   Profiles -> Chassis - Variables
 #=======================================
-Wakanda:
+System:
   profiles:
     chassis:
       - action: No-op
         attach_template: false
-        imc_access_policy: common/aci-kvm
-        power_policy: common/9508
-        snmp_policy: common/snmp
+        imc_access_policy: System/aci-kvm
+        power_policy: System/9508
+        snmp_policy: System/snmp
         targets:
           - description: r143e-2-1 UCS Chassis Profile
             name: r143e-2-1
             serial_number: FOX2611P8N8
-        thermal_policy: common/9508
+        thermal_policy: System/9508

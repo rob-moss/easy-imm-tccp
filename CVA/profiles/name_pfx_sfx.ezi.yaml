@@ -3,13 +3,13 @@
 #   Profiles -> Name Pfx Sfx - Variables
 #============================================
 # If a prefix/suffix policy is undefined default will be used
-Asgard:
+System:
   profiles:
     name_prefix:
-      chassis: ''
-      default: ''
-      domain: ''
-      server: ''
+      chassis: 'global_'
+      default: 'global_'
+      domain: 'global_'
+      server: 'global_'
     name_suffix:
       chassis: ''
       default: ''

@@ -2,7 +2,7 @@
 #====================================
 #   Policies -> VSAN - Variables
 #====================================
-common:
+System:
   policies:
     vsan:
       - name: vsan-a

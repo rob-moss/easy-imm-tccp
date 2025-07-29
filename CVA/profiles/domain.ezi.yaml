@@ -2,26 +2,26 @@
 #======================================
 #   Profiles -> Domain - Variables
 #======================================
-Asgard:
+System:
   profiles:
     domain:
       - action: No-op
         description: r143e-1 UCS Domain Profile
-        ldap_policy: common/RICH
+        ldap_policy: System/RICH
         name: r143e-1
-        network_connectivity_policy: common/dns
-        ntp_policy: common/ntp
+        network_connectivity_policy: System/dns
+        ntp_policy: System/ntp
         port_policies:
-          - common/r143e-1-a
-          - common/r143e-1-b
+          - System/r143e-1-a
+          - System/r143e-1-b
         serial_numbers:
           - unknown
           - unknown
-        snmp_policy: common/snmp
-        switch_control_policy: common/sw-ctrl
-        system_qos_policy: common/qos
+        snmp_policy: System/snmp
+        switch_control_policy: System/sw-ctrl
+        system_qos_policy: System/qos
         vlan_policies:
-          - common/aci-vlans
+          - System/aci-vlans
         vsan_policies:
-          - common/vsan-a
-          - common/vsan-b
+          - System/vsan-a
+          - System/vsan-b

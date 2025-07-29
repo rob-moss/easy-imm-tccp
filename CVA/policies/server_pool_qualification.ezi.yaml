@@ -1,4 +1,4 @@
-common:
+System:
   policies:
     # ISSUE With SPQ https://github.com/CiscoDevNet/terraform-provider-intersight/issues/311
     server_pool_qualification:

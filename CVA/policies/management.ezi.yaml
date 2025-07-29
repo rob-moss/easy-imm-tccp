@@ -2,7 +2,7 @@
 #==========================================
 #   Policies -> Management - Variables
 #==========================================
-common:
+System:
   policies:
     imc_access:
       - description: aci-kvm IMC Access Policy
@@ -15,32 +15,32 @@ common:
       - description: ipmi IPMI over LAN Policy
         name: ipmi
         privilege: admin
-    ldap:
-      - base_settings:
-          domain: rich.ciscolabs.com
-        binding_parameters:
-          bind_dn: CN=Tyson Scott,OU=Cisco Employees,DC=rich,DC=ciscolabs,DC=com
-          bind_method: ConfiguredCredentials
-        description: RICH LDAP Policy
-        enable_group_authorization: false
-        ldap_groups:
-          - end_point_role: admin
-            group_dn: CN=Domain Admins,OU=Users,DC=rich,DC=ciscolabs,DC=com
-            name: Domain Admins
-        ldap_servers:
-          - port: 389
-            server: 10.101.128.15
-            vendor: MSAD
-          - port: 389
-            server: 10.101.128.16
-            vendor: MSAD
-        name: RICH
-        nested_group_search_depth: 128
-        search_parameters:
-          attribute: memberof
-          filter: sAMAccountName=$userid
-          group_attribute: memberof
-        user_search_precedence: LocalUserDb
+#    ldap:
+#      - base_settings:
+#          domain: rich.ciscolabs.com
+#        binding_parameters:
+#          bind_dn: CN=Tyson Scott,OU=Cisco Employees,DC=rich,DC=ciscolabs,DC=com
+#          bind_method: ConfiguredCredentials
+#        description: RICH LDAP Policy
+#        enable_group_authorization: false
+#        ldap_groups:
+#          - end_point_role: admin
+#            group_dn: CN=Domain Admins,OU=Users,DC=rich,DC=ciscolabs,DC=com
+#            name: Domain Admins
+#        ldap_servers:
+#          - port: 389
+#            server: 10.101.128.15
+#            vendor: MSAD
+#          - port: 389
+#            server: 10.101.128.16
+#            vendor: MSAD
+#        name: RICH
+#        nested_group_search_depth: 128
+#        search_parameters:
+#          attribute: memberof
+#          filter: sAMAccountName=$userid
+#          group_attribute: memberof
+#        user_search_precedence: LocalUserDb
     local_user:
       - description: users Local User Policy
         name: users

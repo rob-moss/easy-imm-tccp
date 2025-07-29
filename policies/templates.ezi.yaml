@@ -1,5 +1,5 @@
 ---
-common:
+System:
   policies:
     vhba_template:
       - allow_override: true

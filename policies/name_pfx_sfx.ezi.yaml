@@ -3,7 +3,7 @@
 #   Policies -> Name Pfx Sfx - Variables
 #============================================
 # If a prefix/suffix policy is undefined default will be used
-common:
+System:
   policies:
     name_prefix:
       adapter_configuration: ''

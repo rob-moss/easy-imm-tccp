@@ -2,7 +2,7 @@
 #=======================================
 #   Templates -> Server - Variables
 #=======================================
-common:
+System:
   templates:
     server:
       - bios_policy: M5-intel-virtual

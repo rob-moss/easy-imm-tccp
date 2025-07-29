@@ -2,7 +2,7 @@
 #========================================
 #   Templates -> Chassis - Variables
 #========================================
-common:
+System:
   templates:
     chassis:
       - create_template: true

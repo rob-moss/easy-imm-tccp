@@ -2,7 +2,7 @@
 #======================================
 #   Profiles -> Server - Variables
 #======================================
-Asgard:
+System:
   profiles:
     server:
       - action: No-op
@@ -28,4 +28,4 @@ Asgard:
             serial_number: FCH26407CXM
           - name: r143e-1-1-8
             serial_number: FCH26417734
-        ucs_server_profile_template: common/aci-M6-intel-virtual-tpm-M2-pxe
+        ucs_server_profile_template: System/aci-M6-intel-virtual-tpm-M2-pxe

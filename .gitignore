@@ -430,3 +430,7 @@ tests/results/
 # Pabot
 .pabotsuitenames
 QA
+tfenv.txt
+romoss-tfkey_v1-SecretKey.txt
+.gitignore
+romoss-tfkey-v2-SecretKey.txt

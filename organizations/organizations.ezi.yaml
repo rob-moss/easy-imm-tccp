@@ -2,29 +2,29 @@
 #==================================
 #   Pools -> Pools - Variables
 #==================================
-Asgard:
+Puma:
   create_organization: true
   resource_groups:
-    - name: Asgard
-      resources:
-        targets:
-          - asgard-apic01
-          - asgard-vcenter.rich.ciscolabs.com
-          - LOKI
-          - LOKI01-CIMC
-          - LOKI02-CIMC
-          - LOKI03-CIMC
-          - LOKI04-CIMC
-          - r143e-1
-common:
+    - name: Puma
+
+System:
   create_organization: true
+  resources:
+    targets:
+      - asgard-apic01
+      - asgard-vcenter.rich.ciscolabs.com
+      - LOKI
+      - LOKI01-CIMC
+      - LOKI02-CIMC
+      - LOKI03-CIMC 
+      - LOKI04-CIMC
+      - r143e-1
+      - r143e-2
   organizations_to_share_with:
-    - Asgard
-    - Wakanda
-Wakanda:
+    - Puma
+    - CMN
+
+CMN:
   create_organization: true
   resource_groups:
-    - name: Wakanda
-      resources:
-        targets:
-          - r143e-2
+    - name: CMN

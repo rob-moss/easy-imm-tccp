@@ -2,7 +2,7 @@
 #=============================================
 #   Policies -> Fibre Channel - Variables
 #=============================================
-common:
+System:
   policies:
     fibre_channel_adapter:
       - adapter_template: Initiator
@@ -18,8 +18,8 @@ common:
     fibre_channel_qos:
       - description: fc-qos Fibre-Channel QoS Policy
         name: fc-qos
-default:
-  policies:
+#System:
+#  policies:
     fc_zone:
       - description: vsan-a FC Zone Policy
         fc_target_zoning_type: SIMT
