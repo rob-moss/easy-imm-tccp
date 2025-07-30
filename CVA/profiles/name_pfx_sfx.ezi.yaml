@@ -6,10 +6,10 @@
 System:
   profiles:
     name_prefix:
-      chassis: 'global_'
-      default: 'global_'
-      domain: 'global_'
-      server: 'global_'
+      chassis: ''
+      default: ''
+      domain: ''
+      server: ''
     name_suffix:
       chassis: ''
       default: ''
