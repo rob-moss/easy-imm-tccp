@@ -18,7 +18,7 @@ System:
     fibre_channel_qos:
       - description: fc-qos Fibre-Channel QoS Policy
         name: fc-qos
-default:
+Infrastructure:
   policies:
     fc_zone:
       - description: vsan-a FC Zone Policy

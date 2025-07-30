@@ -23,7 +23,7 @@ System:
         name: Raid1
         unused_disks_state: Jbod
         use_jbod_for_vd_creation: true
-default:
+Infrastructure:
   policies:
     drive_security:
       - description: default

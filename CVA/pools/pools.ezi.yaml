@@ -87,7 +87,7 @@ System:
           - from: 20:00:00:25:B5:C1:B0:00
             size: 255
         name: wwpn-b
-default:
+Infrastructure:
   pools:
     iqn:
       - assignment_order: sequential

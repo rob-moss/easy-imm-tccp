@@ -101,7 +101,7 @@ System:
         enable_video_encryption: true
         name: vkvm
         remote_port: 2068
-default:
+Infrastructure:
   policies:
     device_connector:
       - configuration_from_intersight_only: false

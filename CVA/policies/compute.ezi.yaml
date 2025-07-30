@@ -79,7 +79,7 @@ System:
         enable_low_power_usb: true
         enable_virtual_media_encryption: true
         name: vmedia
-default:
+Infrastructure:
   policies:
     boot_order:
       - boot_devices:

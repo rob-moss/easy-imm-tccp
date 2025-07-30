@@ -40,7 +40,7 @@ System:
               - 8
         port_role_servers:
           - port_list: 37,38
-default:
+Infrastructure:
   policies:
     port:
       - description: ucsx-direct-example with iSCSI-A
