@@ -11,21 +11,20 @@ System:
     - CMN
     - VMCP
 
-#Puma:
-#  create_organization: true
-#  description: Puma tenant
-#  resource_groups:
-#    - name: RG_Puma
-#
-#CMN:
-#  create_organization: true
-#  description: CMN tehant
-#  resource_groups:
-#    - name: RG_CMN
-#  
-#VMCP:
-#  create_organization: true
-#  description: VMCP tenant
-#  resource_groups:
-#    - name: RG_VMCP
-#
+Puma:
+  create_organization: true
+  description: Puma tenant
+  resource_groups:
+    - name: RG_Puma
+
+CMN:
+  create_organization: true
+  description: CMN tehant
+  resource_groups:
+    - name: RG_CMN
+  
+VMCP:
+  create_organization: true
+  description: VMCP tenant
+  resource_groups:
+    - name: RG_VMCP

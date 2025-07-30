@@ -57,7 +57,7 @@ locals {
     }
     ipmi_over_lan = { encryption_key = { 1 = var.ipmi_encryption_key } }
     iscsi_boot    = { password = { 1 = var.iscsi_boot_password } }
-#    ldap          = { password = { 1 = var.binding_parameters_password } }
+    ldap          = { password = { 1 = var.binding_parameters_password } }
     local_user = {
       password = {
         1 = var.local_user_password_1

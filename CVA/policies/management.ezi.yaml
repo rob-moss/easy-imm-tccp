@@ -15,32 +15,32 @@ System:
       - description: ipmi IPMI over LAN Policy
         name: ipmi
         privilege: admin
-#    ldap:
-#      - base_settings:
-#          domain: rich.ciscolabs.com
-#        binding_parameters:
-#          bind_dn: CN=Tyson Scott,OU=Cisco Employees,DC=rich,DC=ciscolabs,DC=com
-#          bind_method: ConfiguredCredentials
-#        description: RICH LDAP Policy
-#        enable_group_authorization: false
-#        ldap_groups:
-#          - end_point_role: admin
-#            group_dn: CN=Domain Admins,OU=Users,DC=rich,DC=ciscolabs,DC=com
-#            name: Domain Admins
-#        ldap_servers:
-#          - port: 389
-#            server: 10.101.128.15
-#            vendor: MSAD
-#          - port: 389
-#            server: 10.101.128.16
-#            vendor: MSAD
-#        name: RICH
-#        nested_group_search_depth: 128
-#        search_parameters:
-#          attribute: memberof
-#          filter: sAMAccountName=$userid
-#          group_attribute: memberof
-#        user_search_precedence: LocalUserDb
+    ldap:
+      - base_settings:
+          domain: rich.ciscolabs.com
+        binding_parameters:
+          bind_dn: CN=Rob Moss,OU=Cisco Employees,DC=rich,DC=ciscolabs,DC=com
+          bind_method: ConfiguredCredentials
+        description: RICH LDAP Policy
+        enable_group_authorization: false
+        ldap_groups:
+          - end_point_role: admin
+            group_dn: CN=Domain Admins,OU=Users,DC=rich,DC=ciscolabs,DC=com
+            name: Domain Admins
+        ldap_servers:
+          - port: 389
+            server: 10.101.128.15
+            vendor: MSAD
+          - port: 389
+            server: 10.101.128.16
+            vendor: MSAD
+        name: RICH
+        nested_group_search_depth: 128
+        search_parameters:
+          attribute: memberof
+          filter: sAMAccountName=$userid
+          group_attribute: memberof
+        user_search_precedence: LocalUserDb
     local_user:
       - description: users Local User Policy
         name: users
@@ -81,6 +81,19 @@ System:
       - description: snmp SNMP Policy
         name: snmp
         snmp_port: 161
+        snmp_trap_destinations:
+          - destination_address: 10.101.128.25 #rich lab linux host
+            port: 162
+            user: snmpadmin
+        snmp_users:
+          - auth_password: 1
+            auth_type: SHA
+            name: snmpadmin
+            privacy_password: 1
+            privacy_type: AES
+            security_level: AuthPriv
+        system_contact: admin@example.com
+        system_location: Example Corporation
     virtual_kvm:
       - allow_tunneled_vkvm: true
         description: vkvm Virtual KVM Policy
