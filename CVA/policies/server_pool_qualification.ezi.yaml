@@ -1,4 +1,17 @@
 # Server pool qualification will not be used in this design
+
+System:
+ policies:
+   server_pool_qualification:
+    - name: none
+      description: none
+
+Infrastructure:
+ policies:
+   server_pool_qualification:
+    - name: none2
+      description: none2
+
 # System:
 #  policies:
 #    # ISSUE With SPQ https://github.com/CiscoDevNet/terraform-provider-intersight/issues/311
