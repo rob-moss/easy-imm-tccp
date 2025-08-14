@@ -16,15 +16,26 @@ Puma:
   description: Puma tenant
   resource_groups:
     - name: Puma_RG
-
+      resources:
+        sub_targets:
+          blades:
+            - FOX25415556
 CMN:
   create_organization: true
   description: CMN tenant
   resource_groups:
     - name: CMN_RG
-  
+      resources:
+        sub_targets:
+          blades:
+            - FOX25415557
+
 VMCP:
   create_organization: true
   description: VMCP tenant
   resource_groups:
     - name: VMCP_RG
+      resources:
+        sub_targets:
+          blades:
+            - FOX25415555  

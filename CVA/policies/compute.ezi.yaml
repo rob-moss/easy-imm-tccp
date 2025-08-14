@@ -65,8 +65,8 @@ System:
         name: fw-domain-servers
         target_platform: FIAttached
     firmware_authenticate:
-      cco_password: 1
-      cco_user: 1
+       cco_password: 1
+       cco_user: 1
     memory:
       - dimm_blocklisting: false
         name: memory_default
