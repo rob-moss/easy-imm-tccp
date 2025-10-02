@@ -637,7 +637,7 @@
                             "bios_template": {
                                 "type": "string",
                                 "default": "",
-                                "description": "Name of a BIOS Template to Configure.\n\nImportant Note: Add `-tpm/Tpm` to enable TPM.  Without `-tpm/Tpm`, TPM is disabled.\n\nOptions are:\n\n  * AnalyticalDatabaseSystems-M6-Intel(-Tpm) - BIOS Policy for Analytical Database Systems on Cisco UCS M6 Servers with Intel processors\n  * AnalyticalDatabaseSystems-M7-Intel(-Tpm) - BIOS Policy for Analytical Database Systems on Cisco UCS M7 Servers with Intel processors\n  * AnalyticsDatabaseSystems-M5-Intel(-Tpm) - BIOS Policy for Analytics Database Decision-Support System on Cisco UCS M5 Servers with Intel processors\n  * CPUIntensive-M6-Intel(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M6 Servers with Intel processors\n  * CPUIntensive-M7-Intel(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M7 Servers with Intel processors\n  * ComputationIntensive-M6-AMD(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M6 Servers with AMD processors\n  * DataAnalytics-M6-Intel(-Tpm) - BIOS Policy for Data Analytics on Cisco UCS M6 Servers with Intel processors\n  * DataAnalytics-M7-Intel(-Tpm) - BIOS Policy for Data Analytics on Cisco UCS M7 Servers with Intel processors\n  * EnergyEfficiency-M5-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M5 Servers with Intel processors\n  * EnergyEfficiency-M6-AMD(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M6 Servers with AMD processors\n  * EnergyEfficiency-M6-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M6 Servers with Intel processors\n  * EnergyEfficient-M7-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M7 Servers with Intel processors\n  * HighPerformanceComputing-M5-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M5 Servers with Intel processors\n  * HighPerformanceComputing-M6-AMD(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M6 Servers with AMD processors\n  * HighPerformanceComputing-M6-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M6 Servers with Intel processors\n  * HighPerformanceComputing-M7-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M7 Servers with Intel processors\n  * IOIntensive-M6-AMD(-Tpm) - BIOS Policy for IO Intensive on Cisco UCS M6 Servers with AMD processors\n  * IOIntensive-M6-Intel(-Tpm) - BIOS Policy for IO Intensive on Cisco UCS M6 Servers with Intel processors\n  * JavaApplicationServer-M5-Intel(-Tpm) - BIOS Policy for Java Application Server on Cisco UCS M5 Servers with Intel processors\n  * LowLatency-M5-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M5 Servers with Intel processors\n  * LowLatency-M6-AMD(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M6 Servers with AMD processors\n  * LowLatency-M6-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M6 Servers with Intel processors\n  * LowLatency-M7-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M7 Servers with Intel processors\n  * M5-amd-virtual(-tpm) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with AMD processors\n  * M5-intel-virtual(-tpm) - (Depricated - Use Virtualization-M5-Intel(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with Intel processors\n  * M6-amd-virtual(-tpm) - (Depricated - Use Virtualization-M6-AMD(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with AMD processors\n  * M6-intel-virtual(-tpm) - (Depricated - Use Virtualization-M6-Intel(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with Intel processors\n  * MaximumPerformance-M5-Intel(-Tpm) - BIOS Policy for Maximum Performance on Cisco UCS M5 Servers with Intel processors\n  * OnlineTransactionProcessing-M5-Intel(-Tpm) - BIOS Policy for Online Transaction Processing on Cisco UCS M5 Servers with Intel processors\n  * RelationalDatabaseSystems-M6-Intel(-Tpm) - BIOS Policy for Relational Database Systems on Cisco UCS M6 Servers with Intel processors\n  * RelationalDatabaseSystems-M7-Intel(-Tpm) - BIOS Policy for Relational Database Systems on Cisco UCS M7 Servers with Intel processors\n  * VDI-M6-AMD(-Tpm) - BIOS Policy for VDI on Cisco UCS M6 Servers with AMD processors\n  * Virtualization-M5-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with Intel processors\n  * Virtualization-M6-AMD(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with AMD processors\n  * Virtualization-M6-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with Intel processors\n  * Virtualization-M7-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M7 Servers with Intel processors\n  * Virtualization-M8-AMD(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M8 Servers with AMD processors\n  * Virtualization-M8-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M8 Servers with AMD processors",
+                                "description": "Name of a BIOS Template to Configure.\n\nImportant Note: Add `-tpm/Tpm` to enable TPM.  Without `-tpm/Tpm`, TPM is disabled.\n\nOptions are:\n\n  * AnalyticalDatabaseSystems-M6-Intel(-Tpm) - BIOS Policy for Analytical Database Systems on Cisco UCS M6 Servers with Intel processors\n  * AnalyticalDatabaseSystems-M7-Intel(-Tpm) - BIOS Policy for Analytical Database Systems on Cisco UCS M7 Servers with Intel processors\n  * AnalyticsDatabaseSystems-M5-Intel(-Tpm) - BIOS Policy for Analytics Database Decision-Support System on Cisco UCS M5 Servers with Intel processors\n  * Analytics-M8-AMD(-Tpm) - BIOS Policy for Analytical Database Systems on Cisco UCS M8 Servers with AMD processors\n  * CPUIntensive-M6-Intel(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M6 Servers with Intel processors\n  * CPUIntensive-M7-Intel(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M7 Servers with Intel processors\n  * CPUIntensive-M8-AMD(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M8 Servers with AMD processors\n  * ComputationIntensive-M6-AMD(-Tpm) - BIOS Policy for CPU Intensive on Cisco UCS M6 Servers with AMD processors\n  * DataAnalytics-M6-Intel(-Tpm) - BIOS Policy for Data Analytics on Cisco UCS M6 Servers with Intel processors\n  * DataAnalytics-M7-Intel(-Tpm) - BIOS Policy for Data Analytics on Cisco UCS M7 Servers with Intel processors\n  * EnergyEfficiency-M5-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M5 Servers with Intel processors\n  * EnergyEfficiency-M6-AMD(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M6 Servers with AMD processors\n  * EnergyEfficiency-M6-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M6 Servers with Intel processors\n  * EnergyEfficient-M7-Intel(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M7 Servers with Intel processors\n  * EnergyEfficiency-M8-AMD(-Tpm) - BIOS Policy for Energy Efficiency on Cisco UCS M8 Servers with AMD processors\n  * HighPerformanceComputing-M5-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M5 Servers with Intel processors\n  * HighPerformanceComputing-M6-AMD(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M6 Servers with AMD processors\n  * HighPerformanceComputing-M6-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M6 Servers with Intel processors\n  * HighPerformanceComputing-M7-Intel(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M7 Servers with Intel processors\n  * HPC-M8-AMD(-Tpm) - BIOS Policy for High-Performance Computing on Cisco UCS M8 Servers with AMD processors\n  * IOIntensive-M6-AMD(-Tpm) - BIOS Policy for IO Intensive on Cisco UCS M6 Servers with AMD processors\n  * IOIntensive-M6-Intel(-Tpm) - BIOS Policy for IO Intensive on Cisco UCS M6 Servers with Intel processors\n  * IOIntensive-M8-AMD(-Tpm) - BIOS Policy for IO Intensive on Cisco UCS M8 Servers with AMD processors\n  * JavaApplicationServer-M5-Intel(-Tpm) - BIOS Policy for Java Application Server on Cisco UCS M5 Servers with Intel processors\n  * LowLatency-M5-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M5 Servers with Intel processors\n  * LowLatency-M6-AMD(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M6 Servers with AMD processors\n  * LowLatency-M6-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M6 Servers with Intel processors\n  * LowLatency-M7-Intel(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M7 Servers with Intel processors\n  * LowLatency-M8-AMD(-Tpm) - BIOS Policy for Low Latency on Cisco UCS M8 Servers with AMD processors\n  * M5-amd-virtual(-tpm) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with AMD processors\n  * M5-intel-virtual(-tpm) - (Depricated - Use Virtualization-M5-Intel(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with Intel processors\n  * M6-amd-virtual(-tpm) - (Depricated - Use Virtualization-M6-AMD(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with AMD processors\n  * M6-intel-virtual(-tpm) - (Depricated - Use Virtualization-M6-Intel(-Tpm)) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with Intel processors\n  * MaximumPerformance-M5-Intel(-Tpm) - BIOS Policy for Maximum Performance on Cisco UCS M5 Servers with Intel processors\n  * OnlineTransactionProcessing-M5-Intel(-Tpm) - BIOS Policy for Online Transaction Processing on Cisco UCS M5 Servers with Intel processors\n  * RDBMS-M8-AMD(-Tpm) - BIOS Policy for Relational Database Systems on Cisco UCS M8 Servers with AMD processors\n  * RelationalDatabaseSystems-M6-Intel(-Tpm) - BIOS Policy for Relational Database Systems on Cisco UCS M6 Servers with Intel processors\n  * RelationalDatabaseSystems-M7-Intel(-Tpm) - BIOS Policy for Relational Database Systems on Cisco UCS M7 Servers with Intel processors\n  * VDI-M6-AMD(-Tpm) - BIOS Policy for VDI on Cisco UCS M6 Servers with AMD processors\n  * Virtualization-M5-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M5 Servers with Intel processors\n  * Virtualization-M6-AMD(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with AMD processors\n  * Virtualization-M6-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M6 Servers with Intel processors\n  * Virtualization-M7-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M7 Servers with Intel processors\n  * Virtualization-M8-AMD(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M8 Servers with AMD processors\n  * Virtualization-M8-Intel(-Tpm) - BIOS Policy for Virtualization on Cisco UCS M8 Servers with AMD processors",
                                 "intersight_api": "bios_template",
                                 "enum": [
                                     "AnalyticalDatabaseSystems-M5-Intel",
@@ -646,6 +646,8 @@
                                     "AnalyticalDatabaseSystems-M6-Intel-Tpm",
                                     "AnalyticalDatabaseSystems-M7-Intel",
                                     "AnalyticalDatabaseSystems-M7-Intel-Tpm",
+                                    "Analytics-M8-AMD",
+                                    "Analytics-M8-AMD-Tpm",
                                     "AzureStack-M6-Intel",
                                     "AzureStack-M6-Intel-Tpm",
                                     "AzureStack-M7-Intel",
@@ -656,6 +658,8 @@
                                     "CPUIntensive-M6-Intel-Tpm",
                                     "CPUIntensive-M7-Intel",
                                     "CPUIntensive-M7-Intel-Tpm",
+                                    "CPUIntensive-M8-AMD",
+                                    "CPUIntensive-M8-AMD-Tpm",
                                     "DataAnalytics-M6-Intel",
                                     "DataAnalytics-M6-Intel-Tpm",
                                     "DataAnalytics-M7-Intel",
@@ -668,6 +672,8 @@
                                     "EnergyEfficiency-M6-Intel-Tpm",
                                     "EnergyEfficient-M7-Intel",
                                     "EnergyEfficient-M7-Intel-Tpm",
+                                    "EnergyEfficiency-M8-AMD",
+                                    "EnergyEfficiency-M8-AMD-Tpm",
                                     "HighPerformanceComputing-M5-Intel",
                                     "HighPerformanceComputing-M5-Intel-Tpm",
                                     "HighPerformanceComputing-M6-AMD",
@@ -676,10 +682,14 @@
                                     "HighPerformanceComputing-M6-Intel-Tpm",
                                     "HighPerformanceComputing-M7-Intel",
                                     "HighPerformanceComputing-M7-Intel-Tpm",
+                                    "HPC-M8-AMD",
+                                    "HPC-M8-AMD-Tpm",
                                     "IOIntensive-M6-AMD",
                                     "IOIntensive-M6-AMD-Tpm",
                                     "IOIntensive-M6-Intel",
                                     "IOIntensive-M6-Intel-Tpm",
+                                    "IOIntensive-M8-AMD",
+                                    "IOIntensive-M8-AMD-Tpm",
                                     "JavaApplicationServer-M5-Intel",
                                     "JavaApplicationServer-M5-Intel-Tpm",
                                     "LowLatency-M5-Intel",
@@ -690,6 +700,8 @@
                                     "LowLatency-M6-Intel-Tpm",
                                     "LowLatency-M7-Intel",
                                     "LowLatency-M7-Intel-Tpm",
+                                    "LowLatency-M8-AMD",
+                                    "LowLatency-M8-AMD-Tpm",
                                     "M5-amd-virtual",
                                     "M5-amd-virtual-tpm",
                                     "M5-intel-virtual",
@@ -702,6 +714,8 @@
                                     "MaximumPerformance-M5-Intel-Tpm",
                                     "OnlineTransactionProcessing-M5-Intel",
                                     "OnlineTransactionProcessing-M5-Intel-Tpm",
+                                    "RDBMS-M8-AMD",
+                                    "RDBMS-M8-AMD-Tpm",
                                     "RelationalDatabaseSystems-M6-Intel",
                                     "RelationalDatabaseSystems-M6-Intel-Tpm",
                                     "RelationalDatabaseSystems-M7-Intel",
@@ -8228,7 +8242,7 @@
                                 "description": "Allowed VLAN IDs of the vnic or ethernet uplink. A list of comma seperated VLAN ids and/or VLAN id ranges.",
                                 "intersight_api": "$ref:VlanSettings:fabric.VlanSettings:AllowedVlans",
                                 "minLength": 1,
-                                "maxLength": 1024,
+                                "maxLength": 2048,
                                 "pattern": "^$|^(((\\d{1,4})|(\\d{1,4}-\\d{1,4}))(,((\\d{1,4})|(\\d{1,4}-\\d{1,4})))*)$",
                                 "title": "action_on_uplink_fail"
                             },
@@ -10137,14 +10151,25 @@
                                 "$ref": "#/components/schemas/abstract_policy/properties/description"
                             },
                             "ip_address": {
-                                "type": "string",
                                 "default": "198.18.32.60",
-                                "description": "The IPv4 address assigned to the iSCSI target.",
+                                "description": "The IPv4 or IPv6 address assigned to the iSCSI target.",
                                 "intersight_api": "IpAddress",
-                                "minLength": 7,
-                                "maxLength": 15,
-                                "pattern": "^$|^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
-                                "title": "ip_address"
+                                "maxLength": 39,
+                                "minLength": 6,
+                                "pattern": "((^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))$)|(^((([0-9a-f]{1,4}:){7}([0-9a-f]{1,4}|:))|(([0-9a-f]{1,4}:){6}(:[0-9a-f]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9a-f]{1,4}:){5}(((:[0-9a-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9a-f]{1,4}:){4}(((:[0-9a-f]{1,4}){1,3})|((:[0-9a-f]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-f]{1,4}:){3}(((:[0-9a-f]{1,4}){1,4})|((:[0-9a-f]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-f]{1,4}:){2}(((:[0-9a-f]{1,4}){1,5})|((:[0-9a-f]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-f]{1,4}:){1}(((:[0-9a-f]{1,4}){1,6})|((:[0-9a-f]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9a-f]{1,4}){1,7})|((:[0-9a-f]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))(%.+)?$))",
+                                "title": "IP Address - IPv4/IPv6",
+                                "type": "string"
+                            },
+                            "ip_protocol": {
+                                "default": "IPv4",
+                                "description": "Default is `IPv4`.  Type of the IP address requested for iSCSI vNIC - IPv4/IPv6.",
+                                "enum": [
+                                    "IPv4",
+                                    "IPv6"
+                                ],
+                                "intersight_api": "IscsiIpType",
+                                "title": "IP Protocol",
+                                "type": "string"
                             },
                             "lun_id": {
                                 "type": "integer",
@@ -10303,7 +10328,7 @@
                                 "description": "List of VNICs to add to the LAN Connectivity Policy that will use a vNIC template.\n\nRequired Attributes:\n  * name\n  * placement\n  * vnic_template\n\nOptional Attributes:\n  * ethernet_adapter_policy - If Allow Override Enabled on the template\n  * cdn_value - Only if Consistency Device Naming has been configured as User at the Template Level. \n  * iscsi_boot_policy - If Allow Override Enabled on the template\n  * mac_address_pool - If Allow Override Enabled on the template\n  * pin_group_name - If Allow Override Enabled on the template\n  * sriov\n  * usnic\n  * vmq",
                                 "intersight_uri": "vnic/EthIfs",
                                 "items": {
-                                    "$ref": "#/components/schemas/lan_connectivity.vnics"
+                                    "$ref": "#/components/schemas/lan_connectivity.vnics_from_template"
                                 },
                                 "object_type": "vnic.EthIf",
                                 "title": "vnics_from_template - Vnics with a Source Template - Intersight Uri: vnic/EthIfs"
@@ -11221,7 +11246,7 @@
             },
             "ldap.ldap_groups": {
                 "type": "object",
-                "description": "Endpoint User or Local User.",
+                "description": "LDAP Groups.",
                 "intersight_api": "ldap_groups",
                 "intersight_uri": "iam/LdapGroups",
                 "object_type": "iam.LdapGroup",
@@ -14493,7 +14518,7 @@
                             },
                             "port_channel_appliances": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Appliance Port-Channels.\n\nRequired Attributes:\n  * ethernet_network_control_policy\n  * ethernet_network_group_policy\n  * fec\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * link_aggregation_policy\n  * mode\n  * priority",
+                                "description": "Use this Map to Configure Ports for Appliance Port-Channels.\n\nRequired Attributes:\n  * ethernet_network_control_policy\n  * ethernet_network_group_policy\n  * fec\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * link_aggregation_policy\n  * mode\n  * priority\n  * user_labels",
                                 "intersight_uri": "fabric/AppliancePcRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_channel_appliances"
@@ -14503,7 +14528,7 @@
                             },
                             "port_channel_ethernet_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Ethernet Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * ethernet_network_group_policy\n  * fec\n  * flow_control_policy\n  * link_aggregation_policy\n  * link_control_policy\n  * mac_sec_policy",
+                                "description": "Use this Map to Configure Ports for Ethernet Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * ethernet_network_group_policy\n  * fec\n  * flow_control_policy\n  * link_aggregation_policy\n  * link_control_policy\n  * mac_sec_policy\n  * user_labels",
                                 "intersight_uri": "fabric/UplinkPcRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_channel_ethernet_uplinks"
@@ -14513,7 +14538,7 @@
                             },
                             "port_channel_fc_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Fibre-Channel Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * vsan_ids",
+                                "description": "Use this Map to Configure Ports for Fibre-Channel Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * user_labels\n  * vsan_ids",
                                 "intersight_uri": "fabric/FcUplinkPcRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_channel_fc_uplinks"
@@ -14523,7 +14548,7 @@
                             },
                             "port_channel_fcoe_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Appliance Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * fec\n  * link_aggregation_policy\n  * link_control_policy",
+                                "description": "Use this Map to Configure Ports for Appliance Port-Channels.\n\nRequired Attributes:\n  * interfaces\n  * pc_ids\n\nOptional Attributes:\n  * admin_speed\n  * fec\n  * link_aggregation_policy\n  * link_control_policy\n  * user_labels",
                                 "intersight_uri": "fabric/FcoeUplinkPcRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_channel_fcoe_uplinks"
@@ -14543,7 +14568,7 @@
                             },
                             "port_role_appliances": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Appliances.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * ethernet_network_control_policy\n  * ethernet_network_group_policy\n  * fec\n  * mode\n  * priority\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for Appliances.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * ethernet_network_control_policy\n  * ethernet_network_group_policy\n  * fec\n  * mode\n  * priority\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/ApplianceRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_appliances"
@@ -14553,7 +14578,7 @@
                             },
                             "port_role_ethernet_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Ethernet Uplinks.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * ethernet_network_group_policy\n  * fec\n  * flow_control_policy\n  * link_control_policy\n  * mac_sec_policy\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for Ethernet Uplinks.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * ethernet_network_group_policy\n  * fec\n  * flow_control_policy\n  * link_control_policy\n  * mac_sec_policy\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/UplinkRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_ethernet_uplinks"
@@ -14563,7 +14588,7 @@
                             },
                             "port_role_fc_storage": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for FC Storage.\n\nRequired Attributes:\n  * port_list\n  * vsan_ids\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for FC Storage.\n\nRequired Attributes:\n  * port_list\n  * vsan_ids\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/FcStorageRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_fc_storage"
@@ -14573,7 +14598,7 @@
                             },
                             "port_role_fc_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for FC Uplinks.\n\nRequired Attributes:\n  * port_list\n  * vsan_ids\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for FC Uplinks.\n\nRequired Attributes:\n  * port_list\n  * vsan_ids\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/FcUplinkRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_fc_uplinks"
@@ -14583,7 +14608,7 @@
                             },
                             "port_role_fcoe_uplinks": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for FCoE Uplinks.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * link_control_policy\n  * fec\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for FCoE Uplinks.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * admin_speed\n  * breakout_port_id\n  * link_control_policy\n  * fec\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/FcoeUplinkRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_fcoe_uplinks"
@@ -14593,7 +14618,7 @@
                             },
                             "port_role_servers": {
                                 "type": "array",
-                                "description": "Use this Map to Configure Ports for Servers.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * auto_negotiation\n  * breakout_port_id\n  * connected_device_type\n  * device_number\n  * fec\n  * slot_id",
+                                "description": "Use this Map to Configure Ports for Servers.\n\nRequired Attributes:\n  * port_list\n\nOptional Attributes:\n  * auto_negotiation\n  * breakout_port_id\n  * connected_device_type\n  * device_number\n  * fec\n  * slot_id\n  * user_labels",
                                 "intersight_uri": "fabric/ServerRoles",
                                 "items": {
                                     "$ref": "#/components/schemas/port.port_role_servers"
@@ -14810,6 +14835,24 @@
                             "Bronze"
                         ],
                         "title": "priority"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -14933,6 +14976,24 @@
                             "title": "pc_id"
                         },
                         "title": "pc_ids - Pc Ids"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -14987,6 +15048,24 @@
                         },
                         "title": "pc_ids - Pc Ids"
                     },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
+                    },
                     "vsan_ids": {
                         "type": "array",
                         "description": "List of one or two Virtual San Identifier associated to the FC Port(s).  One if both Fabrics share the same VSAN.",
@@ -15000,6 +15079,8 @@
                             "maxLength": 4093,
                             "title": "vsan_id"
                         },
+                        "maxItems": 2,
+                        "minItems": 1,
                         "object_type": "VsanId",
                         "title": "vsan_ids - VSAN Identifiers"
                     }
@@ -15089,6 +15170,24 @@
                             "title": "pc_id"
                         },
                         "title": "pc_ids - Pc Ids\nIntersight"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -15300,6 +15399,24 @@
                         "minimum": 1,
                         "maximum": 64,
                         "title": "slot_id"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -15426,6 +15543,24 @@
                         "minimum": 1,
                         "maximum": 64,
                         "title": "slot_id"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -15483,6 +15618,24 @@
                         "maximum": 64,
                         "title": "slot_id"
                     },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
+                    },
                     "vsan_ids": {
                         "type": "array",
                         "description": "List of one or two Virtual San Identifier associated to the FC Port(s).  One if both Fabrics share the same VSAN.",
@@ -15496,6 +15649,8 @@
                             "maxLength": 4093,
                             "title": "vsan_id"
                         },
+                        "maxItems": 2,
+                        "minItems": 1,
                         "object_type": "VsanId",
                         "title": "vsan_ids - VSAN Identifiers"
                     }
@@ -15555,6 +15710,24 @@
                         "maximum": 64,
                         "title": "slot_id"
                     },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
+                    },
                     "vsan_ids": {
                         "type": "array",
                         "description": "List of one or two Virtual San Identifier associated to the FC Port(s).  One if both Fabrics share the same VSAN.",
@@ -15568,6 +15741,8 @@
                             "maxLength": 4093,
                             "title": "vsan_id"
                         },
+                        "maxItems": 2,
+                        "minItems": 1,
                         "object_type": "VsanId",
                         "title": "vsan_ids - VSAN Identifiers"
                     }
@@ -15659,6 +15834,24 @@
                         "minimum": 1,
                         "maximum": 64,
                         "title": "slot_id"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -15740,6 +15933,24 @@
                         "minimum": 1,
                         "maximum": 64,
                         "title": "slot_id"
+                    },
+                    "user_labels": {
+                        "description": "List of one or two User Labels to assocate to the port(s).  One if both Fabrics share the same User Label.",
+                        "intersight_api": "UserLabel",
+                        "items": {
+                            "default": "",
+                            "description": "User label must be between 0 and 127 alphanumeric characters, allowing special characters: ! # $ % & * + , ( ) [ ] { } | / . ? @ _ : ; ~",
+                            "maxLength": 127,
+                            "minLength": 0,
+                            "pattern": "^$|^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]+$",
+                            "title": "User Label",
+                            "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 1,
+                        "object_type": "UserLabel",
+                        "title": "User Labels",
+                        "type": "array"
                     }
                 }
             },
@@ -19693,7 +19904,6 @@
                         "intersight_api": "AuthType",
                         "enum": [
                             "MD5",
-                            "SHA",
                             "SHA",
                             "SHA-224",
                             "SHA-256",
