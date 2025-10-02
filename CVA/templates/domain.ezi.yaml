@@ -7,7 +7,7 @@ System:
     domain:
       - create_template: true
         description: UCS Domain Profile Template
-        name: Wakanda
+        name: r143e
         network_connectivity_policy: System/dns
         ntp_policy: System/ntp
         port_policies:

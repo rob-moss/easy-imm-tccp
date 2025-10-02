@@ -17,3 +17,128 @@ System:
           - multicast_policy: mcast
             name: vlan
             vlan_list: 101-103,1000-1199
+# r142c policies
+      - name: r142c-vlans
+        description: vlans VLAN Policy
+        vlans:
+          - auto_allow_on_uplinks: true
+            multicast_policy: mcast
+            name: default
+            native_vlan: true
+            vlan_list: '1'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: OOB-MGMT
+            vlan_list: '64'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: IB-MGMT
+            vlan_list: '1001'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vMotion
+            vlan_list: '1002'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: iSCSI-A
+            vlan_list: '1011'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: iSCSI-B
+            vlan_list: '1012'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: NVMe-TCP-A
+            vlan_list: '1013'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: NVMe-TCP-B
+            vlan_list: '1014'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: NFS
+            vlan_list: '1015'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1003
+            vlan_list: '1003'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1004
+            vlan_list: '1004'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1005
+            vlan_list: '1005'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1006
+            vlan_list: '1006'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1007
+            vlan_list: '1007'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1008
+            vlan_list: '1008'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl1009
+            vlan_list: '1009'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0998
+            vlan_list: '998'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0999
+            vlan_list: '999'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl3003
+            vlan_list: '3003'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl3004
+            vlan_list: '3004'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0125
+            vlan_list: '125'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0126
+            vlan_list: '126'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0127
+            vlan_list: '127'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0128
+            vlan_list: '128'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0129
+            vlan_list: '129'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0130
+            vlan_list: '130'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: vm-data-vl0131
+            vlan_list: '131'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: OOB-MGMT
+            vlan_list: '1000'
+          - auto_allow_on_uplinks: false
+            multicast_policy: mcast
+            name: dummy-vl_1016
+            vlan_list: '1016'
+          - auto_allow_on_uplinks: false
+            multicast_policy: common/mcast
+            name: dummy_1017
+            vlan_list: '1017'

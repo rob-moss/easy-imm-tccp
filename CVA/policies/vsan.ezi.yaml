@@ -14,3 +14,20 @@ System:
         vsans:
           - name: vsan-b
             vsan_id: 200
+# r142c policies
+      - description: vsan-100 VSAN Policy
+        name: vsan-100
+        uplink_trunking: false
+        vsans:
+          - fcoe_vlan_id: 100
+            name: vsan-100
+            vsan_id: 100
+            vsan_scope: Storage
+      - description: vsan-200 VSAN Policy
+        name: vsan-200
+        uplink_trunking: false
+        vsans:
+          - fcoe_vlan_id: 200
+            name: vsan-200
+            vsan_id: 200
+            vsan_scope: Storage

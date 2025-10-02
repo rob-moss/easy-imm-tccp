@@ -39,6 +39,15 @@ System:
       - allowed_vlans: 101-103,1000-1199
         name: aci-dvs
         native_vlan: 1
+# r143c
+      - allowed_vlans: 125-131,1000-1002,1013-1015
+        description: all_vlans Ethernet Network Group Policy
+        name: all_vlans
+        native_vlan: 1
+      - allowed_vlans: '1001'
+        description: mgmt Ethernet Network Group Policy
+        name: mgmt
+        native_vlan: 1001
     ethernet_qos:
       - description: Best Effort Ethernet QoS Policy
         mtu: 9000
@@ -60,6 +69,8 @@ System:
         mtu: 9000
         name: silver
         priority: Silver
+
+
 Infrastructure:
   policies:
     adapter_configuration:
