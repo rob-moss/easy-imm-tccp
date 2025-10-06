@@ -4,8 +4,8 @@
 #========================================
 global_settings:
   intersight_fqdn: cva2.rich.ciscolabs.com # rebuilt new CVA
-  tags:
-    - key: "Module"
-      value: "easy-imm"
-    - key: "Version"
-      value: "4.2.11-20250122215055407"
+  # tags:
+  #   - key: "Module"
+  #     value: "easy-imm"
+  #   - key: "Version"
+  #     value: "4.2.11-20250122215055407"

@@ -7,40 +7,41 @@ System:
   create_organization: true
   description: System tenant - all policies/profiles/templates
   organizations_to_share_with:
-    - Puma
-    - CMN
-    - VMCP
+    - puma
+    - cmnsh
+    - vmcp
 
-Puma:
+
+puma:
   create_organization: true
   description: Puma tenant
   resource_groups:
-    - name: Puma_RG
-      resources:
-        sub_targets:
-          blades:
-            # - FOX25415556  # r142e
-            - FCH213271VU #r142c-1-3
+    - name: puma_rg
+      # resources:
+      #   sub_targets:
+      #     blades:
+      #       # - FOX25415556  # r142e
+      #        - FCH213271VU #r142c-1-3
 
-CMN:
+cmnsh:
   create_organization: true
   description: CMN tenant
   resource_groups:
-    - name: CMN_RG
-      resources:
-        sub_targets:
-          blades:
-            # - FOX25415557  # r142e
-            - FCH222974YZ #r142c-1-4
+    - name: vmnsh_rg
+      # resources:
+      #   sub_targets:
+      #     blades:
+      #       # - FOX25415557  # r142e
+      #       - FCH222974YZ #r142c-1-4
 
-VMCP:
+vmcp:
   create_organization: true
   description: VMCP tenant
   resource_groups:
-    - name: VMCP_RG
-      resources:
-        sub_targets:
-          blades:
-            # - FOX25415555  # r142e
-            - FLM250803J8 #r142c-1-6
+    - name: vmcp_rg
+      # resources:
+      #   sub_targets:
+      #     blades:
+      #       # - FOX25415555  # r142e
+      #       - FLM250803J8 #r142c-1-6
 
