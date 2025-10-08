@@ -18,7 +18,7 @@ System:
           - unknown
           - unknown
         snmp_policy: System/snmp
-        switch_control_policy: System/sw-ctrl
+        switch_control_policy: System/ccpm_system_sw-ctrl
         system_qos_policy: System/qos
         vlan_policies:
           - System/aci-vlans

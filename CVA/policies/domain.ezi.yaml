@@ -9,19 +9,19 @@ System:
     #   - description: flow-ctrl Flow Control Policy
     #     name: flow-ctrl
     # link_aggregation:
-    #   - description: link-agg Link Aggregation Policy
-    #     name: link-agg
+    #   - description: ccpm_system_link-agg Link Aggregation Policy
+    #     name: ccpm_system_link-agg
     # link_control:
-    #   - description: link-ctrl Link Control Policy
-    #     name: link-ctrl
+    #   - description: ccpm_system_link-ctrl Link Control Policy
+    #     name: ccpm_system_link-ctrl
     # switch_control:
-    #   - description: sw-ctrl Switch Control Policy
-    #     name: sw-ctrl
+    #   - description: ccpm_system_sw-ctrl Switch Control Policy
+    #     name: ccpm_system_sw-ctrl
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: end-host
     #     vlan_port_count_optimization: false
-    #   - description: fc-switch Switch Control Policy
-    #     name: fc-switch
+    #   - description: ccpm_system_fc-switch Switch Control Policy
+    #     name: ccpm_system_fc-switch
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: switch
     #     vlan_port_count_optimization: false
@@ -32,26 +32,26 @@ System:
     #     name: qos
 #r142c policies from SaaS Rich
     flow_control:
-      - description: flow-ctrl Flow Control Policy
-        name: flow-ctrl
+      - name: ccpm_system_flow-ctrl
+        description: flow-ctrl Flow Control Policy
         priority: auto
         receive: Disabled
         send: Disabled
     link_aggregation:
-      - description: link-agg Link Aggregation Policy
+      - name: ccpm_system_link-agg
+        description: System Link Aggregation Policy
         lacp_rate: normal
-        name: link-agg
         suspend_individual: false
     link_control:
-      - admin_state: Enabled
-        description: link-ctrl Link Control Policy
+      - name: ccpm_system_link-ctrl
+        description: System Link Control Policy
+        admin_state: Enabled
         mode: normal
-        name: link-ctrl
     switch_control:
-      - description: fc-switch Switch Control Policy
+      - name: ccpm_system_fc-switch
+        description: System Switch Control Policy
         fabric_port_channel_vhba_reset: Disabled
         mac_address_table_aging: Default
-        name: fc-switch
         reserved_vlan_start_id: 3915
         switching_mode_ethernet: end-host
         switching_mode_fc: switch
@@ -59,10 +59,10 @@ System:
           message_interval: 15
           recovery_action: reset
         vlan_port_count_optimization: false
-      - description: sw-ctrl Switch Control Policy
+      - name: ccpm_system_sw-ctrl
+        description: System Switch Control Policy
         fabric_port_channel_vhba_reset: Disabled
         mac_address_table_aging: Default
-        name: sw-ctrl
         reserved_vlan_start_id: 3915
         switching_mode_ethernet: end-host
         switching_mode_fc: end-host
@@ -71,7 +71,10 @@ System:
           recovery_action: reset
         vlan_port_count_optimization: false
     system_qos:
-      - classes:
+      - name: qos
+        description: qos System QoS Policy
+        jumbo_mtu: true
+        classes:
           - cos: 255
             packet_drop: true
             priority: Best Effort
@@ -102,44 +105,96 @@ System:
             priority: Silver
             state: Enabled
             weight: 8
-        description: qos System QoS Policy
+      - name: ccpm_system_qos
+        description: System qos System QoS Policy
         jumbo_mtu: true
-        name: qos
+        classes:
+          - cos: 255
+            packet_drop: true
+            priority: Best Effort
+            state: Enabled
+            weight: 5
+          - cos: 1
+            packet_drop: true
+            priority: Bronze
+            state: Enabled
+            weight: 7
+          - cos: 4
+            packet_drop: true
+            priority: Gold
+            state: Enabled
+            weight: 9
+          - cos: 3
+            packet_drop: false
+            priority: FC
+            state: Enabled
+            weight: 10
+          - cos: 5
+            packet_drop: false
+            priority: Platinum
+            state: Enabled
+            weight: 10
+          - cos: 2
+            packet_drop: true
+            priority: Silver
+            state: Enabled
+            weight: 8
+    fibre_channel_qos:
+      - name: fc-qos
+        description: fc-qos Fibre-Channel QoS Policy
+        classes:
+          - cos: 3
+            packet_drop: false
+            priority: FC
+            state: Enabled
+            weight: 10
+          - cos: 5
+            packet_drop: false
+            priority: Platinum
+            state: Enabled
+            weight: 10
+          - cos: 2
+            packet_drop: true
+            priority: Silver
+            state: Enabled
+            weight: 8
+    
 
-Infrastructure:
-  policies:
-    system_qos:
-      - classes:
-          - cos: 255
-            packet_drop: true
-            priority: Best Effort
-            state: Enabled
-            weight: 5
-          - cos: 1
-            packet_drop: true
-            priority: Bronze
-            state: Enabled
-            weight: 7
-          - cos: 4
-            packet_drop: true
-            priority: Gold
-            state: Enabled
-            weight: 9
-          - cos: 3
-            packet_drop: false
-            priority: FC
-            state: Enabled
-            weight: 10
-          - cos: 5
-            packet_drop: false
-            priority: Platinum
-            state: Enabled
-            weight: 10
-          - cos: 2
-            packet_drop: true
-            priority: Silver
-            state: Enabled
-            weight: 8
-        description: qos System QoS Policy
-        jumbo_mtu: true
-        name: qos
+
+# Infrastructure:
+#   policies:
+#     system_qos:
+#       - name: qos
+#         description: qos System QoS Policy
+#         classes:
+#           - cos: 255
+#             packet_drop: true
+#             priority: Best Effort
+#             state: Enabled
+#             weight: 5
+#           - cos: 1
+#             packet_drop: true
+#             priority: Bronze
+#             state: Enabled
+#             weight: 7
+#           - cos: 4
+#             packet_drop: true
+#             priority: Gold
+#             state: Enabled
+#             weight: 9
+#           - cos: 3
+#             packet_drop: false
+#             priority: FC
+#             state: Enabled
+#             weight: 10
+#           - cos: 5
+#             packet_drop: false
+#             priority: Platinum
+#             state: Enabled
+#             weight: 10
+#           - cos: 2
+#             packet_drop: true
+#             priority: Silver
+#             state: Enabled
+#             weight: 8
+#         jumbo_mtu: true
