@@ -20,8 +20,8 @@ puma:
       # resources:
       #   sub_targets:
       #     blades:
-      #       # - FOX25415556  # r142e
-      #        - FCH213271VU #r142c-1-3
+      #       # - FOX25415556 # blade serial number(s) to assign to the RG
+      #       # - FCH213271VU 
 
 cmnsh:
   create_organization: true
@@ -31,8 +31,8 @@ cmnsh:
       # resources:
       #   sub_targets:
       #     blades:
-      #       # - FOX25415557  # r142e
-      #       - FCH222974YZ #r142c-1-4
+      #       # - FOX25415557  # blade serial number(s)
+      #       # - FCH222974YZ
 
 vmcp:
   create_organization: true
@@ -42,6 +42,5 @@ vmcp:
       # resources:
       #   sub_targets:
       #     blades:
-      #       # - FOX25415555  # r142e
-      #       - FLM250803J8 #r142c-1-6
-
+      #       # - FOX25415555  # blade serial number(s)
+      #       # - FLM250803J8
