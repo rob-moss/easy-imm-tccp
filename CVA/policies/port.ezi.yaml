@@ -41,7 +41,7 @@ System:
               - 1
               - 48
         port_role_servers:
-          - port_list: 1-28 # 1-28 for server chassis
+          - port_list: 1-28                                 # 1-28 for server chassis
 
     # 6454 working example
       # - device_model: UCS-FI-6454

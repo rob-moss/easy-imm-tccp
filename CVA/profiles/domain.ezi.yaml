@@ -7,19 +7,19 @@ System:
     domain:
       - action: No-op
         description: r143e-1 UCS Domain Profile
-        ldap_policy: System/RICH
-        name: r143e-1
-        network_connectivity_policy: System/dns
-        ntp_policy: System/ntp
+        ldap_policy: System/ccpm-system-RICH
+        name: ccpm-system-ucs_domain-vcl-01
+        network_connectivity_policy: System/ccpm-system-dns
+        ntp_policy: System/ccpm-system-ntp
         port_policies:
-          - System/r143e-1-a
-          - System/r143e-1-b
+          - System/ccpm-system-ucs_domain-vcl-01-a
+          - System/ccpm-system-ucs_domain-vcl-01-b
         serial_numbers:
           - unknown
           - unknown
-        snmp_policy: System/snmp
-        switch_control_policy: System/ccpm_system_sw-ctrl
-        system_qos_policy: System/ccpm_stystem_qos
+        snmp_policy: System/ccpm-system-snmp
+        switch_control_policy: System/ccpm-system-swctrl
+        system_qos_policy: System/ccpm-system-qos
         vlan_policies:
           - System/aci-vlans
         vsan_policies:

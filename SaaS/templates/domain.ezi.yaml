@@ -14,7 +14,7 @@ System:
           - System/r143e-2-a
           - System/r143e-2-b
         snmp_policy: System/snmp
-        switch_control_policy: System/ccpm_system_sw-ctrl
+        switch_control_policy: System/ccpm-system-swctrl
         system_qos_policy: System/qos
         vlan_policies:
           - System/aci-vlans

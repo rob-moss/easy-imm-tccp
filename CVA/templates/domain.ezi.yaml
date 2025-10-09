@@ -8,14 +8,14 @@ System:
       - create_template: true
         description: UCS Domain Profile Template
         name: r143e
-        network_connectivity_policy: System/dns
-        ntp_policy: System/ntp
+        network_connectivity_policy: System/ccpm-system-dns
+        ntp_policy: System/ccpm-system-ntp
         port_policies:
           - System/r143e-1-a
           - System/r143e-1-b
-        snmp_policy: System/snmp
-        switch_control_policy: System/ccpm_system_sw-ctrl
-        system_qos_policy: System/qos
+        snmp_policy: System/ccpm-system-snmp
+        switch_control_policy: System/ccpm-system-swctrl
+        system_qos_policy: System/ccpm-system-qos
         vlan_policies:
           - System/aci-vlans
         vsan_policies:

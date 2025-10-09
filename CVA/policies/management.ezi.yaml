@@ -5,23 +5,24 @@
 System:
   policies:
     imc_access:
-      - description: aci-kvm IMC Access Policy
+      - name: aci-kvm
+        description: aci-kvm IMC Access Policy
         inband_ip_pool: aci-kvm-inband
         inband_vlan_id: 101
         ipv4_address_configuration: true
-        name: aci-kvm
         out_of_band_ip_pool: kvm-ooband
     ipmi_over_lan:
-      - description: ipmi IPMI over LAN Policy
-        name: ipmi
+      - name: ipmi
+        description: ipmi IPMI over LAN Policy
         privilege: admin
     ldap:
-      - base_settings:
+      - name: ccpm-system-RICH
+        description: RICH LDAP Policy
+        base_settings:
           domain: rich.ciscolabs.com
         binding_parameters:
           bind_dn: CN=Rob Moss,OU=Cisco Employees,DC=rich,DC=ciscolabs,DC=com
           bind_method: ConfiguredCredentials
-        description: RICH LDAP Policy
         enable_group_authorization: false
         ldap_groups:
           - end_point_role: admin
@@ -34,7 +35,6 @@ System:
           - port: 389
             server: 10.101.128.16
             vendor: MSAD
-        name: RICH
         nested_group_search_depth: 128
         search_parameters:
           attribute: memberof
@@ -42,8 +42,8 @@ System:
           group_attribute: memberof
         user_search_precedence: LocalUserDb
     local_user:
-      - description: users Local User Policy
-        name: users
+      - name: ccpm-system-users
+        description: users Local User Policy
         password_properties:
           always_send_user_password: false
           enable_password_expiry: true
@@ -58,28 +58,28 @@ System:
             role: admin
             username: admin
     network_connectivity:
-      - description: dns Network Connectivity Policy
+      - name: ccpm-system-dns
+        description: dns Network Connectivity Policy
         dns_servers_v4:
-          - 10.101.128.15
-          - 10.101.128.16
-        name: dns
+          - 144.136.201.10
+          - 144.136.201.10
     ntp:
-      - description: ntp NTP Policy
+      - name: ccpm-system-ntp
+        description: ntp NTP Policy
         enabled: true
-        name: ntp
         ntp_servers:
           - 10.101.128.15
           - 10.101.128.16
-        timezone: America/New_York
+        timezone: Australia/Melbourne
     serial_over_lan:
-      - baud_rate: 115200
-        com_port: com0
+      - name: ccpm-system-sol
         description: sol Serial over LAN Policy
-        name: sol
+        baud_rate: 115200
+        com_port: com0
         ssh_port: 2400
     snmp:
-      - description: snmp SNMP Policy
-        name: snmp
+      - name: ccpm-system-snmp
+        description: snmp SNMP Policy
         snmp_port: 161
         snmp_trap_destinations:
           - destination_address: 10.101.128.25 #rich lab linux host
@@ -95,36 +95,36 @@ System:
         system_contact: admin@example.com
         system_location: Example Corporation
     virtual_kvm:
-      - allow_tunneled_vkvm: false
+      - name: ccpm-system-vkvm
         description: vkvm Virtual KVM Policy
+        allow_tunneled_vkvm: false
         enable_local_server_video: true
         enable_video_encryption: true
-        name: vkvm
         remote_port: 2068
     smtp:
-      - description: smtp SMTP Policy
+      - name: ccpm-system-smtp
+        description: smtp SMTP Policy
         mail_alert_recipients:
           - admin@example.com
           - infra-ops@example.com
         minimum_severity: critical
-        name: smtp
         smtp_alert_sender_address: intersight@example.com
         smtp_port: 25
         smtp_server_address: mail.example.com
     ssh:
-      - description: ssh SSH Policy
-        name: ssh
+      - name: ccpm-system-ssh
+        description: ssh SSH Policy
         ssh_port: 22
         ssh_timeout: 1800
     device_connector:
-      - configuration_from_intersight_only: false
+      - name: devcon
         description: devcon Device Connector Policy
-        name: devcon
+        configuration_from_intersight_only: false
     syslog:
-      - description: syslog Syslog Policy
+      - name: ccpm-system-syslog
+        description: syslog Syslog Policy
         local_logging:
           minimum_severity: warning
-        name: syslog
         remote_logging:
           - enable: true
             hostname: 198.18.5.14

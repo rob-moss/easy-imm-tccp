@@ -5,24 +5,57 @@
 System:
   pools:
     ip:
-      - ipv4_blocks:
-          - from: 198.18.101.64
-            size: 32
+      - name: ccpm-system-ippool-vcl-01-inband_1
+        description: Model Clayton Inband IP Pool 1
+        ipv4_blocks:
+          - from: 10.242.62.10                          # .1 + 9
+            size: 245                                   # 255-10. First 10 are reserved
         ipv4_configuration:
-          gateway: 198.18.101.254
-          netmask: 255.255.255.0
-          primary_dns: 10.101.128.15
-          secondary_dns: 10.101.128.16
-        name: aci-kvm-inband
-      - ipv4_blocks:
-          - from: 192.168.64.160
-            size: 64
+          gateway: 10.242.62.1                          
+          netmask: 255.255.255.128                      # /25
+          primary_dns: 144.136.201.10                   # model Clayton DNS 1
+          secondary_dns: 144.136.201.10                 # model Clayton DNS 2
+      - name: ccpm-system-ippool-vcl-01-inband_2
+        description: Model Clayton Inband IP Pool 2
+        ipv4_blocks:
+          - from: 10.242.62.139                         # .129 + 9 reserved
+            size: 245                                   # 255-10. First 10 are reserved
         ipv4_configuration:
-          gateway: 192.168.64.1
-          netmask: 255.255.254.0
-          primary_dns: 10.101.128.15
-          secondary_dns: 10.101.128.16
-        name: kvm-ooband
+          gateway: 10.242.62.129
+          netmask: 255.255.255.128                      # /25
+          primary_dns: 144.136.201.10                   # model Clayton DNS 1
+          secondary_dns: 144.136.201.10                 # model Clayton DNS 2
+      - name: ccpm-system-ippool-vcl-01-outband_1
+        description: Model Clayton OOB IP Pool 1
+        ipv4_blocks:
+          - from: 10.242.63.10
+            size: 502                                   # 512-10. First 10 are reserved
+        ipv4_configuration:
+          gateway: 10.242.63.1
+          netmask: 255.255.255.0                        # /24
+          primary_dns: 144.136.201.10                   # model Clayton DNS 1
+          secondary_dns: 144.136.201.10                 # model Clayton DNS 2
+
+
+
+      # - ipv4_blocks:
+      #     - from: 198.18.101.64
+      #       size: 32
+      #   ipv4_configuration:
+      #     gateway: 198.18.101.254
+      #     netmask: 255.255.255.0
+      #     primary_dns: 10.101.128.15
+      #     secondary_dns: 10.101.128.16
+      #   name: aci-kvm-inband
+      # - ipv4_blocks:
+      #     - from: 192.168.64.160
+      #       size: 64
+      #   ipv4_configuration:
+      #     gateway: 192.168.64.1
+      #     netmask: 255.255.254.0
+      #     primary_dns: 10.101.128.15
+      #     secondary_dns: 10.101.128.16
+      #   name: kvm-ooband
     mac:
       - mac_blocks:
           - from: 00:25:B5:C1:10:00

@@ -32,7 +32,7 @@ System:
           message_interval: 15
           recovery_action: reset
         vlan_port_count_optimization: false
-      - name: ccpm_system_sw-ctrl
+      - name: ccpm-system-swctrl
         description: System Switch Control Policy
         fabric_port_channel_vhba_reset: Disabled
         mac_address_table_aging: Default
@@ -124,8 +124,8 @@ System:
     #   - description: ccpm_system_link-ctrl Link Control Policy
     #     name: ccpm_system_link-ctrl
     # switch_control:
-    #   - description: ccpm_system_sw-ctrl Switch Control Policy
-    #     name: ccpm_system_sw-ctrl
+    #   - description: ccpm-system-swctrl Switch Control Policy
+    #     name: ccpm-system-swctrl
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: end-host
     #     vlan_port_count_optimization: false
