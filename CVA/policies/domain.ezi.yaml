@@ -4,33 +4,6 @@
 #======================================
 System:
   policies:
-    # r143e original policies
-    # flow_control:
-    #   - description: flow-ctrl Flow Control Policy
-    #     name: flow-ctrl
-    # link_aggregation:
-    #   - description: ccpm_system_link-agg Link Aggregation Policy
-    #     name: ccpm_system_link-agg
-    # link_control:
-    #   - description: ccpm_system_link-ctrl Link Control Policy
-    #     name: ccpm_system_link-ctrl
-    # switch_control:
-    #   - description: ccpm_system_sw-ctrl Switch Control Policy
-    #     name: ccpm_system_sw-ctrl
-    #     switching_mode_ethernet: end-host
-    #     switching_mode_fc: end-host
-    #     vlan_port_count_optimization: false
-    #   - description: ccpm_system_fc-switch Switch Control Policy
-    #     name: ccpm_system_fc-switch
-    #     switching_mode_ethernet: end-host
-    #     switching_mode_fc: switch
-    #     vlan_port_count_optimization: false
-    # system_qos:
-    #   - configure_recommended_classes: true
-    #     description: qos System QoS Policy
-    #     jumbo_mtu: true
-    #     name: qos
-#r142c policies from SaaS Rich
     flow_control:
       - name: ccpm_system_flow-ctrl
         description: flow-ctrl Flow Control Policy
@@ -139,62 +112,31 @@ System:
             priority: Silver
             state: Enabled
             weight: 8
-    fibre_channel_qos:
-      - name: fc-qos
-        description: fc-qos Fibre-Channel QoS Policy
-        classes:
-          - cos: 3
-            packet_drop: false
-            priority: FC
-            state: Enabled
-            weight: 10
-          - cos: 5
-            packet_drop: false
-            priority: Platinum
-            state: Enabled
-            weight: 10
-          - cos: 2
-            packet_drop: true
-            priority: Silver
-            state: Enabled
-            weight: 8
-    
 
-
-# Infrastructure:
-#   policies:
-#     system_qos:
-#       - name: qos
-#         description: qos System QoS Policy
-#         classes:
-#           - cos: 255
-#             packet_drop: true
-#             priority: Best Effort
-#             state: Enabled
-#             weight: 5
-#           - cos: 1
-#             packet_drop: true
-#             priority: Bronze
-#             state: Enabled
-#             weight: 7
-#           - cos: 4
-#             packet_drop: true
-#             priority: Gold
-#             state: Enabled
-#             weight: 9
-#           - cos: 3
-#             packet_drop: false
-#             priority: FC
-#             state: Enabled
-#             weight: 10
-#           - cos: 5
-#             packet_drop: false
-#             priority: Platinum
-#             state: Enabled
-#             weight: 10
-#           - cos: 2
-#             packet_drop: true
-#             priority: Silver
-#             state: Enabled
-#             weight: 8
-#         jumbo_mtu: true
+    # r143e original policies
+    # flow_control:
+    #   - description: flow-ctrl Flow Control Policy
+    #     name: flow-ctrl
+    # link_aggregation:
+    #   - description: ccpm_system_link-agg Link Aggregation Policy
+    #     name: ccpm_system_link-agg
+    # link_control:
+    #   - description: ccpm_system_link-ctrl Link Control Policy
+    #     name: ccpm_system_link-ctrl
+    # switch_control:
+    #   - description: ccpm_system_sw-ctrl Switch Control Policy
+    #     name: ccpm_system_sw-ctrl
+    #     switching_mode_ethernet: end-host
+    #     switching_mode_fc: end-host
+    #     vlan_port_count_optimization: false
+    #   - description: ccpm_system_fc-switch Switch Control Policy
+    #     name: ccpm_system_fc-switch
+    #     switching_mode_ethernet: end-host
+    #     switching_mode_fc: switch
+    #     vlan_port_count_optimization: false
+    # system_qos:
+    #   - configure_recommended_classes: true
+    #     description: qos System QoS Policy
+    #     jumbo_mtu: true
+    #     name: qos
+#r142c policies from SaaS Rich

@@ -16,7 +16,7 @@ System:
         local_user_policy: users
         name: aci-M5-intel-virtual-M2-pxe
         power_policy: server
-        san_connectivity_policy: scp
+        san_connectivity_policy: ccpm_system_scp
         serial_over_lan_policy: sol
         snmp_policy: snmp
         storage_policy: M2-Raid
@@ -36,7 +36,7 @@ System:
         local_user_policy: users
         name: aci-M5-intel-virtual-tpm-M2-pxe
         power_policy: server
-        san_connectivity_policy: scp
+        san_connectivity_policy: ccpm_system_scp
         serial_over_lan_policy: sol
         snmp_policy: snmp
         storage_policy: M2-Raid
@@ -57,7 +57,7 @@ System:
         memory_policy: memory_default
         name: aci-M6-intel-virtual-tpm-M2-pxe
         power_policy: server
-        san_connectivity_policy: scp
+        san_connectivity_policy: ccpm_system_scp
         scrub_policy: scrub_default
         serial_over_lan_policy: sol
         snmp_policy: snmp

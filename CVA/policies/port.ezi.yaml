@@ -5,31 +5,33 @@
 System:
   policies:
     port:
-      - device_model: UCS-FI-6454
+      - description: CCPM 6536 Pod
+        device_model: UCS-FI-6536
         names:
-          - r143e-1-a
-          - r143e-1-b
+          - ccpm-system-ucs_domain-vcl-01-a
+          - ccpm-system-ucs_domain-vcl-01-b
         port_channel_ethernet_uplinks:
           - admin_speed: Auto
             ethernet_network_group_policies:
               - aci-uplink
             flow_control_policy: ccpm_system_flow-ctrl
             interfaces:
-              - port_id: 53
-              - port_id: 54
+              - port_id: 29
+              - port_id: 30
+              - port_id: 31
+              - port_id: 32
             link_aggregation_policy: ccpm_system_link-agg
             link_control_policy: ccpm_system_link-ctrl
             pc_ids:
-              - 53
-              - 53
+              - 101
+              - 102
         port_channel_fc_uplinks:
           - admin_speed: 32Gbps
             interfaces:
-              - port_id: 1
-              - port_id: 2
+              - port_id: 36
             pc_ids:
-              - 1
-              - 1
+              - 201
+              - 202
             vsan_ids:
               - 100
               - 200
@@ -37,9 +39,46 @@ System:
           - custom_mode: FibreChannel
             port_list:
               - 1
-              - 8
+              - 48
         port_role_servers:
-          - port_list: 37,38
+          - port_list: 1-28 # 1-28 for server chassis
+
+    # 6454 working example
+      # - device_model: UCS-FI-6454
+      #   names:
+      #     - r143e-1-a
+      #     - r143e-1-b
+      #   port_channel_ethernet_uplinks:
+      #     - admin_speed: Auto
+      #       ethernet_network_group_policies:
+      #         - aci-uplink
+      #       flow_control_policy: ccpm_system_flow-ctrl
+      #       interfaces:
+      #         - port_id: 53
+      #         - port_id: 54
+      #       link_aggregation_policy: ccpm_system_link-agg
+      #       link_control_policy: ccpm_system_link-ctrl
+      #       pc_ids:
+      #         - 53
+      #         - 53
+      #   port_channel_fc_uplinks:
+      #     - admin_speed: 32Gbps
+      #       interfaces:
+      #         - port_id: 1
+      #         - port_id: 2
+      #       pc_ids:
+      #         - 1
+      #         - 1
+      #       vsan_ids:
+      #         - 100
+      #         - 200
+      #   port_modes:
+      #     - custom_mode: FibreChannel
+      #       port_list:
+      #         - 1
+      #         - 8
+      #   port_role_servers:
+      #     - port_list: 37,38
 
 
 # Infrastructure:

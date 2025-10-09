@@ -19,7 +19,7 @@ System:
           - unknown
         snmp_policy: System/snmp
         switch_control_policy: System/ccpm_system_sw-ctrl
-        system_qos_policy: System/qos
+        system_qos_policy: System/ccpm_stystem_qos
         vlan_policies:
           - System/aci-vlans
         vsan_policies:
