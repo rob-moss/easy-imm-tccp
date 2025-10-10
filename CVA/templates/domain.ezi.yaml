@@ -17,7 +17,7 @@ System:
         switch_control_policy: System/ccpm-system-swctrl
         system_qos_policy: System/ccpm-system-qos
         vlan_policies:
-          - System/aci-vlans
+          - System/ccpm-system-vlans_allvlans                         # All System and Tenant VLANs in to the FI
         vsan_policies:
           - System/vsan-a
           - System/vsan-b

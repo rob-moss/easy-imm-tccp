@@ -5,24 +5,46 @@
 System:
   policies:
     power:
-      - description: 5108 Power Policy
-        name: '5108'
-        power_redundancy: Grid
-      - description: 9508 Power Policy
-        name: '9508'
+      # - name: '5108'
+      #   description: 5108 Power Policy
+      #   power_redundancy: Grid
+      # - name: '9508'
+      #   description: 9508 Power Policy
+      #   power_allocation: 5600
+      #   power_redundancy: Grid
+      # - name: server
+      #   description: server Power Policy
+      #   power_redundancy: Grid
+      #   power_restore: LastState
+#
+      # - name: 'ccpm-system-power_5108'                        # 5108 Chassis Power Policy
+      #   description: 5108 Power Policy
+      #   power_redundancy: Grid
+      - name: 'ccpm-system-power_9508'                        # 9508 Chassis Power Policy
+        description: 9508 Power Policy
         power_allocation: 5600
         power_redundancy: Grid
-      - description: server Power Policy
-        name: server
+      - name: ccpm-system-power_server                        # Server Power Policy
+        description: server Power Policy
         power_redundancy: Grid
         power_restore: LastState
     thermal:
-      - description: 5108 Thermal Policy
+      - name: '5108'
+        description: 5108 Thermal Policy
         fan_control_mode: Balanced
-        name: '5108'
-      - description: 9508 Thermal Policy
+      - name: '9508'
+        description: 9508 Thermal Policy
         fan_control_mode: Balanced
-        name: '9508'
-      - description: server Thermal Policy
+      - name: server
+        description: server Thermal Policy
         fan_control_mode: Balanced
-        name: server
+#
+      # - name: 'ccpm-system-thermal_5108'
+      #   description: 5108 Thermal Policy
+      #   fan_control_mode: Balanced
+      - name: 'ccpm-system-thermal_9508'
+        description: 9508 Thermal Policy
+        fan_control_mode: Balanced
+      - name: ccpm-system-thermal_server
+        description: server Thermal Policy
+        fan_control_mode: Balanced

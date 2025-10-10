@@ -29,14 +29,12 @@ System:
         description: Model Clayton OOB IP Pool 1
         ipv4_blocks:
           - from: 10.242.63.10
-            size: 502                                   # 512-10. First 10 are reserved
+            size: 502                                   # 512-10. First 9 are reserved
         ipv4_configuration:
           gateway: 10.242.63.1
           netmask: 255.255.255.0                        # /24
           primary_dns: 144.136.201.10                   # model Clayton DNS 1
           secondary_dns: 144.136.201.10                 # model Clayton DNS 2
-
-
 
       # - ipv4_blocks:
       #     - from: 198.18.101.64
@@ -56,6 +54,14 @@ System:
       #     primary_dns: 10.101.128.15
       #     secondary_dns: 10.101.128.16
       #   name: kvm-ooband
+
+
+
+
+
+#######################
+# MAC Address Pools
+
     mac:
       - mac_blocks:
           - from: 00:25:B5:C1:10:00
@@ -99,6 +105,14 @@ System:
     #     server_pool_qualification_policies:
     #       - SPQ-Blade
     #     target_platform: FIAttached
+
+
+
+
+
+
+##################
+# UUID Pools
     uuid:
       - description: uuid UUID Pool
         name: uuid
@@ -106,11 +120,18 @@ System:
         uuid_blocks:
           - from: 25B5-000000000000
             size: 255
+
+##################
+# WWNN Pools
+
     wwnn:
       - id_blocks:
           - from: 20:00:00:25:B5:C1:00:00
             size: 255
         name: wwnn
+##################
+# WWPN Pools
+
     wwpn:
       - id_blocks:
           - from: 20:00:00:25:B5:C1:A0:00
@@ -120,14 +141,14 @@ System:
           - from: 20:00:00:25:B5:C1:B0:00
             size: 255
         name: wwpn-b
-Infrastructure:
-  pools:
-    iqn:
-      - assignment_order: sequential
-        description: default
-        iqn_blocks:
-          - from: 0
-            size: 255
-            suffix: ucs-host
-        name: default
-        prefix: iqn.1984-12.com.cisco
+# Infrastructure:
+#   pools:
+#     iqn:
+#       - assignment_order: sequential
+#         description: default
+#         iqn_blocks:
+#           - from: 0
+#             size: 255
+#             suffix: ucs-host
+#         name: default
+#         prefix: iqn.1984-12.com.cisco

@@ -5,10 +5,19 @@
 System:
   templates:
     chassis:
-      - create_template: true
+      # Original from easyimm
+      # - create_template: true
+      #   description: 9508 Chassis Profile Template
+      #   imc_access_policy: aci-kvm
+      #   name: '9508'
+      #   power_policy: '9508'
+      #   snmp_policy: snmp
+      #   thermal_policy: '9508'
+#
+      - name: ccpm-system-chassis_9508
         description: 9508 Chassis Profile Template
-        imc_access_policy: aci-kvm
-        name: '9508'
-        power_policy: '9508'
-        snmp_policy: snmp
-        thermal_policy: '9508'
+        create_template: true
+        imc_access_policy: System/ccpm-system-vkvm
+        power_policy: System/ccpm-system-power_9508
+        snmp_policy: System/ccpm-system-snmp
+        thermal_policy: System/ccpm-system-thermal_9508

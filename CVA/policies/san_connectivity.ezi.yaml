@@ -6,14 +6,14 @@ System:
   policies:
     san_connectivity:
       - description: System SAN Connectivity Policy
-        name: ccpm_system_scp
+        name: ccpm-system-scp
         target_platform: FIAttached
         vhbas:
           - fibre_channel_adapter_policy: Initiator
             fibre_channel_network_policies:
               - vsan-a
               - vsan-b
-            fibre_channel_qos_policy: ccpm_system_fc-qos
+            fibre_channel_qos_policy: ccpm-system-fcqos
             names:
               - vhba-a
               - vhba-b
@@ -27,7 +27,7 @@ System:
               - wwpn-b
         wwnn_pool: wwnn
     fibre_channel_qos:
-      - name: ccpm_system_fc-qos
+      - name: ccpm-system-fcqos
         description: System Fibre-Channel QoS Policy
         burst: 10240
         max_data_field_size: 2112

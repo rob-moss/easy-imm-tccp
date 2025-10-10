@@ -16,7 +16,7 @@ System:
         description: ipmi IPMI over LAN Policy
         privilege: admin
     ldap:
-      - name: ccpm-system-RICH
+      - name: ccpm-system-LDAP_Account01
         description: RICH LDAP Policy
         base_settings:
           domain: rich.ciscolabs.com
