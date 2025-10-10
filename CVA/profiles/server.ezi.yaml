@@ -1,10 +1,19 @@
-# ---
-# #======================================
-# #   Profiles -> Server - Variables
-# #======================================
-# System:
-#   profiles:
-#     server:
+---
+#======================================
+#   Profiles -> Server - Variables
+#======================================
+System:
+  profiles:
+    server:
+      - ucs_server_profile_template: System/ccpm-system-server_M7_virt_win_vcl_v1
+        action: No-op
+        attach_template: true
+        domain_name: ccpm-system-chassis-vcl-01
+        target_platform: FIAttached
+        targets:
+          - name: test1
+            serial_number: unknown
+
 #       - ucs_server_profile_template: System/aci-M6-intel-virtual-tpm-M2-pxe
 #         action: No-op
 #         attach_template: true

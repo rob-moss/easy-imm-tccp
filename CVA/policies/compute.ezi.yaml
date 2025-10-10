@@ -41,7 +41,7 @@ System:
         txt_support: enabled
       - name: ccpm-system-bios_m7_virt
         description: M7 Server Virtualisation BIOS Policy
-        baud_rate: '115200'
+        baud_rate: '115200'                                                 # Should match SOL Baud rate
         bios_template: Virtualization-M7-Intel-Tpm
         boot_performance_mode: Max Performance
         console_redirection: com-0
@@ -51,6 +51,8 @@ System:
     boot_order:
       - name: ccpm-system-boot_m2_pxe
         description: Boot from vKVM, M.2, PXE then UEFI Shell
+        boot_mode: Uefi
+        enable_secure_boot: true
         boot_devices:
           - device_name: KVM-DVD
             device_type: virtual_media
@@ -64,9 +66,7 @@ System:
             slot: MLOM
           - device_name: UEFI
             device_type: uefi_shell
-        boot_mode: Uefi
-        enable_secure_boot: true
-      - name: ccpm-system-boot-vkvm-m2-pxe-uefi
+      - name: ccpm-system-boot_vkvm_m2_pxe_uefi
         description: Boot from vKVM, M.2, PXE then UEFI Shell
         boot_devices:
           - device_name: KVM-DVD

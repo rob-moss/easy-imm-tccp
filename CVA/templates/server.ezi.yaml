@@ -5,13 +5,13 @@
 System:
   templates:
     server:
-      - name: ccpm-system-server_M7_virt_win_v1
-        description: x210c M7 Server Profile Template for Windows v1
+      - name: ccpm-system-server_M7_virt_win_vcl_v1
+        description: x210c M7 Server Profile Template for VCL Windows v1
         bios_policy: System/ccpm-system-bios_m7_virt
         boot_order_policy: System/ccpm-system-boot_m2_pxe
         create_template: true
         firmware_policy: System/ccpm-system-firmware_5.2
-        imc_access_policy: System/
+        imc_access_policy: System/ccpm-system-imc_vcl_01
         ipmi_over_lan_policy: System/ccpm-system-ipmi
         lan_connectivity_policy: System/ccpm-system-lcp_windows
         local_user_policy: System/ccpm-system-users
@@ -22,12 +22,12 @@ System:
         scrub_policy: System/ccpm-system-noscrub                    # does not wipe disk
         serial_over_lan_policy: System/ccpm-system-sol
         snmp_policy: System/ccpm-system-snmp
-        storage_policy: System/
+        storage_policy: System/ccpm-system-stor_raid1
         syslog_policy: System/ccpm-system-syslog
         target_platform: FIAttached
         thermal_policy: System/ccpm-system-thermal_server
         uuid_pool: System/ccpm-system-pool_uuid_vcl
-        virtual_kvm_policy: System/
+        virtual_kvm_policy: System/ccpm-system-vkvm
         virtual_media_policy: System/ccpm-system-vmedia
 
 

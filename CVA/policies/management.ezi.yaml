@@ -11,6 +11,12 @@ System:
         inband_vlan_id: 101
         ipv4_address_configuration: true
         out_of_band_ip_pool: kvm-ooband
+      - name: ccpm-system-imc_vcl_01
+        description: IMC access policy for VCL
+        inband_ip_pool: ccpm-system-ippool-vcl-01-inband_1
+        inband_vlan_id: 4                                           # TODO: change this
+        ipv4_address_configuration: true
+        out_of_band_ip_pool: ccpm-system-ippool-vcl-01-outband_1
     ipmi_over_lan:
       - name: ccpm-system-ipmi
         description: ipmi IPMI over LAN Policy
@@ -82,18 +88,18 @@ System:
         description: snmp SNMP Policy
         snmp_port: 161
         snmp_trap_destinations:
-          - destination_address: 10.101.128.25 #rich lab linux host
+          - destination_address: 10.101.128.25                    # TODO: change this from rich lab linux host
             port: 162
             user: snmpadmin
         snmp_users:
           - auth_password: 1
             auth_type: SHA
-            name: snmpadmin
+            name: snmpadmin                                        # TODO: update this
             privacy_password: 1
             privacy_type: AES
             security_level: AuthPriv
-        system_contact: admin@example.com
-        system_location: Example Corporation
+        system_contact: admin@example.com                           # TODO: update this
+        system_location: Telstra
     virtual_kvm:
       - name: ccpm-system-vkvm
         description: vkvm Virtual KVM Policy
@@ -105,10 +111,10 @@ System:
       - name: ccpm-system-smtp
         description: smtp SMTP Policy
         mail_alert_recipients:
-          - admin@example.com
+          - admin@example.com                                     # TODO: update
           - infra-ops@example.com
         minimum_severity: critical
-        smtp_alert_sender_address: intersight@example.com
+        smtp_alert_sender_address: intersight@example.com         # TODO: update
         smtp_port: 25
         smtp_server_address: mail.example.com
     ssh:
@@ -117,7 +123,7 @@ System:
         ssh_port: 22
         ssh_timeout: 1800
     device_connector:
-      - name: devcon
+      - name: ccpm-system-devcon
         description: devcon Device Connector Policy
         configuration_from_intersight_only: false
     syslog:
@@ -127,12 +133,12 @@ System:
           minimum_severity: warning
         remote_logging:
           - enable: true
-            hostname: 198.18.5.14
+            hostname: 198.18.5.14                                   # TODO: update
             minimum_severity: warning
             port: 514
-            protocol: udp
+            protocol: udp                                           # TODO: update to TCP
           - enable: true
-            hostname: 198.18.5.15
+            hostname: 198.18.5.15                                   # TODO: update
             minimum_severity: warning
             port: 514
-            protocol: udp
+            protocol: udp                                           # TODO: update to TCP

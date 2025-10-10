@@ -2,24 +2,6 @@
 #=======================================
 #   Profiles -> Chassis - Variables
 #=======================================
- # Original file (commented):
- # ---
- # #=======================================
- # #   Profiles -> Chassis - Variables
- # #=======================================
- # System:
- #   profiles:
- #     chassis:
- #       # - action: No-op
- #       #   imc_access_policy: System/ccpm-system-vkvm
- #       #   power_policy: System/9508
- #       #   snmp_policy: System/ccpm-system-snmp
- #       #   targets:
- #       #     - description: r143e-1-1 UCS Chassis Profile
- #       #       name: r143e-1-1
- #       #       serial_number: unknown
- #       #   thermal_policy: System/9508
- # #=======================================
  #       - action: No-op
  #         imc_access_policy: System/ccpm-system-vkvm
  #         power_policy: System/ccpm-system-power_9508
