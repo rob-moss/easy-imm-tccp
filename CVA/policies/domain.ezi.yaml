@@ -5,23 +5,23 @@
 System:
   policies:
     flow_control:
-      - name: ccpm_system_flow-ctrl
+      - name: ccpm-system-flow-ctrl
         description: flow-ctrl Flow Control Policy
         priority: auto
         receive: Disabled
         send: Disabled
     link_aggregation:
-      - name: ccpm_system_link-agg
+      - name: ccpm-system-link-agg
         description: System Link Aggregation Policy
         lacp_rate: normal
         suspend_individual: false
     link_control:
-      - name: ccpm_system_link-ctrl
+      - name: ccpm-system-link-ctrl
         description: System Link Control Policy
         admin_state: Enabled
         mode: normal
     switch_control:
-      - name: ccpm_system_fc-switch
+      - name: ccpm-system-fcswitch
         description: System Switch Control Policy
         fabric_port_channel_vhba_reset: Disabled
         mac_address_table_aging: Default
@@ -78,7 +78,7 @@ System:
             priority: Silver
             state: Enabled
             weight: 8
-      - name: ccpm_system_qos
+      - name: ccpm-system-qos
         description: System qos System QoS Policy
         jumbo_mtu: true
         classes:
@@ -118,19 +118,19 @@ System:
     #   - description: flow-ctrl Flow Control Policy
     #     name: flow-ctrl
     # link_aggregation:
-    #   - description: ccpm_system_link-agg Link Aggregation Policy
-    #     name: ccpm_system_link-agg
+    #   - description: ccpm-system-link-agg Link Aggregation Policy
+    #     name: ccpm-system-link-agg
     # link_control:
-    #   - description: ccpm_system_link-ctrl Link Control Policy
-    #     name: ccpm_system_link-ctrl
+    #   - description: ccpm-system-link-ctrl Link Control Policy
+    #     name: ccpm-system-link-ctrl
     # switch_control:
     #   - description: ccpm-system-swctrl Switch Control Policy
     #     name: ccpm-system-swctrl
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: end-host
     #     vlan_port_count_optimization: false
-    #   - description: ccpm_system_fc-switch Switch Control Policy
-    #     name: ccpm_system_fc-switch
+    #   - description: ccpm-system-fcswitch Switch Control Policy
+    #     name: ccpm-system-fcswitch
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: switch
     #     vlan_port_count_optimization: false

@@ -1,7 +1,4 @@
 ---
-#=======================================
-#   Policies -> Compute - Variables
-#=======================================
 System:
   policies:
     bios:
@@ -42,7 +39,7 @@ System:
         serial_port_aenable: enabled
         terminal_type: vt100
         txt_support: enabled
-      - name: ccpm_system_m7-virt
+      - name: ccpm-system-bios_m7_virt
         description: M7 Server Virtualisation BIOS Policy
         baud_rate: '115200'
         bios_template: Virtualization-M7-Intel-Tpm
@@ -52,7 +49,7 @@ System:
         terminal_type: vt100
         txt_support: enabled
     boot_order:
-      - name: M2-pxe
+      - name: ccpm-system-boot_m2_pxe
         description: Boot from vKVM, M.2, PXE then UEFI Shell
         boot_devices:
           - device_name: KVM-DVD
@@ -69,7 +66,7 @@ System:
             device_type: uefi_shell
         boot_mode: Uefi
         enable_secure_boot: true
-      - name: ccpm_system_boot-vkvm-m2-pxe-uefi
+      - name: ccpm-system-boot-vkvm-m2-pxe-uefi
         description: Boot from vKVM, M.2, PXE then UEFI Shell
         boot_devices:
           - device_name: KVM-DVD
@@ -87,7 +84,7 @@ System:
         boot_mode: Uefi
         enable_secure_boot: true
     firmware:
-      - name: ccpm_system_firmware-5.2
+      - name: ccpm-system-firmware_5.2
         description: UCS x210c 5.2(2.240053) firmware policy
         target_platform: FIAttached
         model_bundle_version:
@@ -113,17 +110,17 @@ System:
     memory:
       - name: memory_default
         dimm_blocklisting: false
-      - name: ccpm_system_memory
+      - name: ccpm-system-memory
         dimm_blocklisting: true
     scrub:
       - name: scrub_default
         bios: false
         disk: false
-      - name: ccpm_system_noscrub
+      - name: ccpm-system-noscrub
         description: Disk scrub policy - no disk or bios scrub
         bios: false
         disk: false
-      - name: ccpm_system_scrub
+      - name: ccpm-system-scrub
         description: Disk scrub policy - scrub and wipe disk and bios
         bios: true
         disk: true
@@ -132,7 +129,7 @@ System:
         description: vmedia Virtual Media Policy
         enable_low_power_usb: true
         enable_virtual_media_encryption: true
-      - name: ccpm_system_vmedia
+      - name: ccpm-system-vmedia
         description: vmedia Virtual Media Policy
         enable_low_power_usb: true
         enable_virtual_media_encryption: true

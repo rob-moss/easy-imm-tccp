@@ -5,23 +5,23 @@
 System:
   policies:
     port:
-      - description: CCPM 6536 Pod
+      - description: CCPM 6536 Pod in VCL - Std Pod
         device_model: UCS-FI-6536
         names:
-          - ccpm-system-ucs_domain-vcl-01-a
-          - ccpm-system-ucs_domain-vcl-01-b
+          - ccpm-system-ucs_domain-vcl-a
+          - ccpm-system-ucs_domain-vcl-b
         port_channel_ethernet_uplinks:
           - admin_speed: Auto
             ethernet_network_group_policies:
               - aci-uplink
-            flow_control_policy: ccpm_system_flow-ctrl
+            flow_control_policy: ccpm-system-flow-ctrl
             interfaces:
               - port_id: 29
               - port_id: 30
               - port_id: 31
               - port_id: 32
-            link_aggregation_policy: ccpm_system_link-agg
-            link_control_policy: ccpm_system_link-ctrl
+            link_aggregation_policy: ccpm-system-link-agg
+            link_control_policy: ccpm-system-link-ctrl
             pc_ids:
               - 101
               - 102
@@ -52,12 +52,12 @@ System:
       #     - admin_speed: Auto
       #       ethernet_network_group_policies:
       #         - aci-uplink
-      #       flow_control_policy: ccpm_system_flow-ctrl
+      #       flow_control_policy: ccpm-system-flow-ctrl
       #       interfaces:
       #         - port_id: 53
       #         - port_id: 54
-      #       link_aggregation_policy: ccpm_system_link-agg
-      #       link_control_policy: ccpm_system_link-ctrl
+      #       link_aggregation_policy: ccpm-system-link-agg
+      #       link_control_policy: ccpm-system-link-ctrl
       #       pc_ids:
       #         - 53
       #         - 53

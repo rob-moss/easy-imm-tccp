@@ -12,7 +12,7 @@ System:
         ipv4_address_configuration: true
         out_of_band_ip_pool: kvm-ooband
     ipmi_over_lan:
-      - name: ipmi
+      - name: ccpm-system-ipmi
         description: ipmi IPMI over LAN Policy
         privilege: admin
     ldap:

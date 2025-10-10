@@ -5,28 +5,28 @@
 System:
   policies:
     ethernet_adapter:
-      - adapter_template: Win-AzureStack
+      - name: Win-AzureStack
         description: Win-AzureStack Ethernet Adapter
-        name: Win-AzureStack
-      - adapter_template: VMware
+        adapter_template: Win-AzureStack
+      - name: VMware
         description: VMware Ethernet Adapter
-        name: VMware
+        adapter_template: VMware
     ethernet_network_control:
-      - cdp_enable: true
+      - name: both
         description: cdp Ethernet Network Control Policy
+        cdp_enable: true
         lldp_enable_receive: true
         lldp_enable_transmit: true
-        name: both
-      - cdp_enable: true
+      - name: cdp
         description: cdp Ethernet Network Control Policy
-        name: cdp
-      - description: lldp Ethernet Network Control Policy
+        cdp_enable: true
+      - name: lldp
+        description: lldp Ethernet Network Control Policy
         lldp_enable_receive: true
         lldp_enable_transmit: true
-        name: lldp
     ethernet_network_group:
-      - allowed_vlans: 101-103,1000-1199
-        name: aci-uplink
+      - name: aci-uplink
+        allowed_vlans: 101-103,1000-1199
       - allowed_vlans: '101'
         name: aci-mgmt
         native_vlan: 101
@@ -40,87 +40,87 @@ System:
         name: aci-dvs
         native_vlan: 1
 # r143c
-      - allowed_vlans: 125-131,1000-1002,1013-1015
+      - name: all_vlans
         description: all_vlans Ethernet Network Group Policy
-        name: all_vlans
+        allowed_vlans: 125-131,1000-1002,1013-1015
         native_vlan: 1
-      - allowed_vlans: '1001'
+      - name: mgmt
         description: mgmt Ethernet Network Group Policy
-        name: mgmt
+        allowed_vlans: '1001'
         native_vlan: 1001
     ethernet_qos:
-      - description: Best Effort Ethernet QoS Policy
+      - name: best-effort
+        description: Best Effort Ethernet QoS Policy
         mtu: 9000
-        name: best-effort
         priority: Best Effort
-      - description: Bronze Ethernet QoS Policy
+      - name: bronze
+        description: Bronze Ethernet QoS Policy
         mtu: 9000
-        name: bronze
         priority: Bronze
-      - description: Gold Ethernet QoS Policy
+      - name: gold
+        description: Gold Ethernet QoS Policy
         mtu: 9000
-        name: gold
         priority: Gold
-      - description: Platinum Ethernet QoS Policy
+      - name: platinum
+        description: Platinum Ethernet QoS Policy
         mtu: 9000
-        name: platinum
         priority: Platinum
-      - description: Silver Ethernet QoS Policy
+      - name: silver
+        description: Silver Ethernet QoS Policy
         mtu: 9000
-        name: silver
         priority: Silver
 
 
-Infrastructure:
-  policies:
-    adapter_configuration:
-      - add_vic_adapter_configuration:
-          - dce_interface_settings:
-              dce_interface_1_fec_mode: cl91
-              dce_interface_2_fec_mode: cl91
-              dce_interface_3_fec_mode: cl91
-              dce_interface_4_fec_mode: cl91
-            enable_fip: true
-            enable_lldp: true
-            enable_physical_nic_mode: false
-            enable_port_channel: true
-            pci_slot: MLOM
-        description: adapter Adapter Configuration Policy
-        name: adapter
-    ethernet_network:
-      - default_vlan: 4
-        description: network Ethernet Network Policy
-        name: network
-        vlan_mode: ACCESS
-    ethernet_network_control:
-      - cdp_enable: true
-        description: cdp Ethernet Network Control Policy
-        name: cdp
-    ethernet_network_group:
-      - allowed_vlans: "15"
-        name: iSCSI-VLG-A
-        native_vlan: 15
-      - allowed_vlans: "16"
-        name: iSCSI-VLG-B
-        native_vlan: 16
-    iscsi_adapter:
-      - description: adapter iSCSI Adapter Policy
-        dhcp_timeout: 60
-        lun_busy_retry_count: 15
-        name: adapter
-        tcp_connection_timeout: 15
-    iscsi_boot:
-      - authentication: none
-        description: boot iSCSI Boot Policy
-        initiator_ip_source: DHCP
-        iscsi_adapter_policy: adapter
-        name: boot
-        primary_target_policy: target
-        target_source_type: Static
-    iscsi_static_target:
-      - description: target iSCSI Static Target Policy
-        ip_address: 198.18.32.60
-        lun_id: 0
-        name: target
-        port: 3260
-        target_name: iqn.1984-12.com.cisco:lnx1
+# Infrastructure:
+#   policies:
+#     adapter_configuration:
+#       - name: adapter
+#         description: adapter Adapter Configuration Policy
+#         add_vic_adapter_configuration:
+#           - dce_interface_settings:
+#               dce_interface_1_fec_mode: cl91
+#               dce_interface_2_fec_mode: cl91
+#               dce_interface_3_fec_mode: cl91
+#               dce_interface_4_fec_mode: cl91
+#             enable_fip: true
+#             enable_lldp: true
+#             enable_physical_nic_mode: false
+#             enable_port_channel: true
+#             pci_slot: MLOM
+#     ethernet_network:
+#       - name: network
+#         description: network Ethernet Network Policy
+#         default_vlan: 4
+#         vlan_mode: ACCESS
+#     ethernet_network_control:
+#       - name: cdp
+#         description: cdp Ethernet Network Control Policy
+#         cdp_enable: true
+#     ethernet_network_group:
+#       - name: iSCSI-VLG-A
+#         allowed_vlans: "15"
+#         native_vlan: 15
+#       - allowed_vlans: "16"
+#         name: iSCSI-VLG-B
+#         native_vlan: 16
+#     iscsi_adapter:
+#       - name: adapter
+#         description: adapter iSCSI Adapter Policy
+#         dhcp_timeout: 60
+#         lun_busy_retry_count: 15
+#         tcp_connection_timeout: 15
+#     iscsi_boot:
+#       - name: boot
+#         description: boot iSCSI Boot Policy
+#         authentication: none
+#         initiator_ip_source: DHCP
+#         iscsi_adapter_policy: adapter
+#         primary_target_policy: target
+#         target_source_type: Static
+#     iscsi_static_target:
+#       - name: target
+#         description: target iSCSI Static Target Policy
+#         ip_address: 198.18.32.60
+#         lun_id: 0
+#         port: 3260
+#         target_name: iqn.1984-12.com.cisco:lnx1

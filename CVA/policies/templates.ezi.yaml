@@ -2,19 +2,20 @@
 System:
   policies:
     vhba_template:
-      - allow_override: true
+      - name: vHBA
         description: vHBA Template
+        allow_override: true
         fibre_channel_adapter_policy: Initiator
         fibre_channel_network_policy: vsan-a
         fibre_channel_qos_policy: fc-qos
-        name: vHBA
         persistent_lun_bindings: false
         placement_switch_id: A
         vhba_type: fc-initiator
         wwpn_pool: wwpn-a
     vnic_template:
-      - allow_override: true
+      - name: vnic0
         description: vnic0 template
+        allow_override: true
         enable_failover: true
         ethernet_adapter_policy:  Win-AzureStack
         ethernet_network_control_policy: both
@@ -22,7 +23,6 @@ System:
           - aci-mgmt
         ethernet_qos_policy: best-effort
         mac_address_pool: dual-fabric
-        name: vnic0
         placement_switch_id: A
         sriov:
           completion_queue_count_per_vf: 5

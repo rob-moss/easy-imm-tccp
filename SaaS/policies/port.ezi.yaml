@@ -13,12 +13,12 @@ System:
           - admin_speed: Auto
             ethernet_network_group_policies:
               - aci-uplink
-            flow_control_policy: ccpm_system_flow-ctrl
+            flow_control_policy: ccpm-system-flow-ctrl
             interfaces:
               - port_id: 53
               - port_id: 54
-            link_aggregation_policy: ccpm_system_link-agg
-            link_control_policy: ccpm_system_link-ctrl
+            link_aggregation_policy: ccpm-system-link-agg
+            link_control_policy: ccpm-system-link-ctrl
             pc_ids:
               - 53
               - 53

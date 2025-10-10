@@ -10,9 +10,9 @@ System:
         description: Multicast Policy
         snooping_state: Enabled
         querier_state: Disabled
-
     vlan:
-      - name: ccpm-system-vlans_allvlans
+      - name: ccpm-system-vlans_allvlans_vcl
+        description: All VLANs for Model Clayton site VCL
         vlans:
           - name: Native
             description: Native VLAN
@@ -27,13 +27,13 @@ System:
             multicast_policy: System/ccpm-system-mcast
             vlan_list: 10-50                             # TODO: update this to match Inband
           - name: cmnsh
-            vlan_list: 100-300                           # TODO: update this to match CMNSH
+            vlan_list: 100-299                           # TODO: update this to match CMNSH
             description: CMNSH VLANs
             native_vlan: false
             auto_allow_on_uplinks: true
             multicast_policy: System/ccpm-system-mcast
           - name: puma
-            vlan_list: 300-400                            # TODO: update this to match Puma
+            vlan_list: 300-499                            # TODO: update this to match Puma
             description: Puma VLANs
             native_vlan: false
             auto_allow_on_uplinks: true

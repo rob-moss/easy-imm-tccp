@@ -120,6 +120,12 @@ System:
         uuid_blocks:
           - from: 25B5-000000000000
             size: 255
+      - name: ccpm-system-pool_uuid_vcl
+        description: UUID pool for VCL
+        prefix: 000025B5-C15C-0000
+        uuid_blocks:
+          - from: "CAFE-000000000000"
+            size: 1024
 
 ##################
 # WWNN Pools

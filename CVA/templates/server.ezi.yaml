@@ -1,12 +1,40 @@
-# ---
-# #=======================================
-# #   Templates -> Server - Variables
-# #=======================================
-# System:
-#   templates:
-#     server:
+---
+#=======================================
+#   Templates -> Server - Variables
+#=======================================
+System:
+  templates:
+    server:
+      - name: ccpm-system-server_M7_virt_win_v1
+        description: x210c M7 Server Profile Template for Windows v1
+        bios_policy: System/ccpm-system-bios_m7_virt
+        boot_order_policy: System/ccpm-system-boot_m2_pxe
+        create_template: true
+        firmware_policy: System/ccpm-system-firmware_5.2
+        imc_access_policy: System/
+        ipmi_over_lan_policy: System/ccpm-system-ipmi
+        lan_connectivity_policy: System/ccpm-system-lcp_windows
+        local_user_policy: System/ccpm-system-users
+        ldap_policy: System/ccpm-system-LDAP_Account01
+        memory_policy: System/ccpm-system-memory
+        power_policy: System/ccpm-system-power_server
+        san_connectivity_policy: System/ccpm-system-scp
+        scrub_policy: System/ccpm-system-noscrub                    # does not wipe disk
+        serial_over_lan_policy: System/ccpm-system-sol
+        snmp_policy: System/ccpm-system-snmp
+        storage_policy: System/
+        syslog_policy: System/ccpm-system-syslog
+        target_platform: FIAttached
+        thermal_policy: System/ccpm-system-thermal_server
+        uuid_pool: System/ccpm-system-pool_uuid_vcl
+        virtual_kvm_policy: System/
+        virtual_media_policy: System/ccpm-system-vmedia
+
+
+
+
 #       - bios_policy: M5-intel-virtual
-#         boot_order_policy: M2-pxe
+#         boot_order_policy: ccpm-system-boot_m2_pxe
 #         create_template: true
 #         description: aci-M5-intel-virtual-M2-pxe Server Profile Template
 #         firmware_policy: fw-domain-servers
@@ -26,7 +54,7 @@
 #         virtual_kvm_policy: vkvm
 #         virtual_media_policy: vmedia
 #       - bios_policy: M5-intel-virtual-tpm
-#         boot_order_policy: M2-pxe
+#         boot_order_policy: ccpm-system-boot_m2_pxe
 #         create_template: true
 #         description: aci-M5-intel-virtual-tpm-M2-pxe Server Profile Template
 #         firmware_policy: fw-domain-servers
@@ -46,7 +74,7 @@
 #         virtual_kvm_policy: vkvm
 #         virtual_media_policy: vmedia
 #       - bios_policy: M6-intel-virtual-tpm
-#         boot_order_policy: M2-pxe
+#         boot_order_policy: ccpm-system-boot_m2_pxe
 #         create_template: true
 #         description: aci-M6-intel-virtual-tpm-M2-pxe Server Profile Template
 #         firmware_policy: fw-domain-servers

@@ -2,6 +2,46 @@
 #=======================================
 #   Profiles -> Chassis - Variables
 #=======================================
+ # Original file (commented):
+ # ---
+ # #=======================================
+ # #   Profiles -> Chassis - Variables
+ # #=======================================
+ # System:
+ #   profiles:
+ #     chassis:
+ #       # - action: No-op
+ #       #   imc_access_policy: System/ccpm-system-vkvm
+ #       #   power_policy: System/9508
+ #       #   snmp_policy: System/ccpm-system-snmp
+ #       #   targets:
+ #       #     - description: r143e-1-1 UCS Chassis Profile
+ #       #       name: r143e-1-1
+ #       #       serial_number: unknown
+ #       #   thermal_policy: System/9508
+ # #=======================================
+ #       - action: No-op
+ #         imc_access_policy: System/ccpm-system-vkvm
+ #         power_policy: System/ccpm-system-power_9508
+ #         snmp_policy: System/ccpm-system-snmp
+ #         targets:
+ #           - description: Model Clayton POD1
+ #             name: ccpm-system-chassis-vcl-01
+ #             serial_number: unknown
+ #         thermal_policy: System/ccpm-system-thermal_9508
+ #         ucs_chassis_profile_template: cpm-system-chassis_9508
+ #
+ # # try this by using just the one chassis profile template
+ #       - action: No-op
+ #         ucs_chassis_profile_template: cpm-system-chassis_9508
+ #         targets:
+ #           - description: Model Clayton POD2
+ #             name: ccpm-system-chassis-vcl-02
+ #             serial_number: unknown
+ #         # thermal_policy: System/ccpm-system-thermal_9508
+ #         # imc_access_policy: System/ccpm-system-vkvm
+ #         # power_policy: System/ccpm-system-power_9508
+ #         # snmp_policy: System/ccpm-system-snmp
 System:
   profiles:
     chassis:
@@ -20,8 +60,8 @@ System:
         power_policy: System/ccpm-system-power_9508
         snmp_policy: System/ccpm-system-snmp
         targets:
-          - description: Model Clayton POD1
-            name: ccpm-system-chassis-vcl-01
+          - name: ccpm-system-chassis-vcl-01
+            description: Model Clayton POD1
             serial_number: unknown
         thermal_policy: System/ccpm-system-thermal_9508
         ucs_chassis_profile_template: cpm-system-chassis_9508
@@ -30,8 +70,8 @@ System:
       - action: No-op
         ucs_chassis_profile_template: cpm-system-chassis_9508
         targets:
-          - description: Model Clayton POD2
-            name: ccpm-system-chassis-vcl-02
+          - name: ccpm-system-chassis-vcl-02
+            description: Model Clayton POD2
             serial_number: unknown
         # thermal_policy: System/ccpm-system-thermal_9508
         # imc_access_policy: System/ccpm-system-vkvm

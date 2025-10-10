@@ -7,27 +7,27 @@ System:
     vsan:
       - name: vsan-a
         vsans:
-          - fcoe_vlan_id: 100
-            name: vsan-a
+          - name: vsan-a
+            fcoe_vlan_id: 100
             vsan_id: 100
       - name: vsan-b
         vsans:
           - name: vsan-b
             vsan_id: 200
-# r142c policies
-      - description: vsan-100 VSAN Policy
-        name: vsan-100
+      # r142c policies
+      - name: vsan-100
+        description: vsan-100 VSAN Policy
         uplink_trunking: false
         vsans:
-          - fcoe_vlan_id: 100
-            name: vsan-100
+          - name: vsan-100
+            fcoe_vlan_id: 100
             vsan_id: 100
             vsan_scope: Storage
-      - description: vsan-200 VSAN Policy
-        name: vsan-200
+      - name: vsan-200
+        description: vsan-200 VSAN Policy
         uplink_trunking: false
         vsans:
-          - fcoe_vlan_id: 200
-            name: vsan-200
+          - name: vsan-200
+            fcoe_vlan_id: 200
             vsan_id: 200
             vsan_scope: Storage

@@ -5,8 +5,8 @@
 System:
   policies:
     san_connectivity:
-      - description: System SAN Connectivity Policy
-        name: ccpm-system-scp
+      - name: ccpm-system-scp
+        description: System SAN Connectivity Policy
         target_platform: FIAttached
         vhbas:
           - fibre_channel_adapter_policy: Initiator

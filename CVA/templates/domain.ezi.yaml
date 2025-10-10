@@ -5,19 +5,37 @@
 System:
   templates:
     domain:
-      - create_template: true
+      - name: ccpm-system-ucs_domain-vcl
         description: UCS Domain Profile Template
-        name: r143e
+        create_template: true
         network_connectivity_policy: System/ccpm-system-dns
         ntp_policy: System/ccpm-system-ntp
         port_policies:
-          - System/r143e-1-a
-          - System/r143e-1-b
+          - System/ccpm-system-ucs_domain-vcl-a
+          - System/ccpm-system-ucs_domain-vcl-b
         snmp_policy: System/ccpm-system-snmp
         switch_control_policy: System/ccpm-system-swctrl
         system_qos_policy: System/ccpm-system-qos
         vlan_policies:
-          - System/ccpm-system-vlans_allvlans                         # All System and Tenant VLANs in to the FI
+          - System/ccpm-system-vlans_allvlans_vcl                 # All System and Tenant VLANs in to the FI
         vsan_policies:
           - System/vsan-a
           - System/vsan-b
+        ldap_policy: System/ccpm-system-LDAP_Account01
+# org
+      # - name: r143e
+      #   description: UCS Domain Profile Template
+      #   create_template: true
+      #   network_connectivity_policy: System/ccpm-system-dns
+      #   ntp_policy: System/ccpm-system-ntp
+      #   port_policies:
+      #     - System/r143e-1-a
+      #     - System/r143e-1-b
+      #   snmp_policy: System/ccpm-system-snmp
+      #   switch_control_policy: System/ccpm-system-swctrl
+      #   system_qos_policy: System/ccpm-system-qos
+      #   vlan_policies:
+      #     - System/ccpm-system-vlans_allvlans                         # All System and Tenant VLANs in to the FI
+      #   vsan_policies:
+      #     - System/vsan-a
+      #     - System/vsan-b

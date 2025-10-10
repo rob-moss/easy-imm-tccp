@@ -5,23 +5,54 @@
 System:
   profiles:
     domain:
-      - action: No-op
-        description: r143e-1 UCS Domain Profile
-        ldap_policy: System/ccpm-system-LDAP_Account01
-        name: ccpm-system-ucs_domain-vcl-01
-        network_connectivity_policy: System/ccpm-system-dns
-        ntp_policy: System/ccpm-system-ntp
-        port_policies:
-          - System/ccpm-system-ucs_domain-vcl-01-a
-          - System/ccpm-system-ucs_domain-vcl-01-b
+      - name: ccpm-system-ucs_domain-vcl-01
+        description: Model Domain Profile 1
+        action: No-op
+        attach_template: true
+        ucs_domain_profile_template: ccpm-system-ucs_domain-vcl
+        # ldap_policy: System/ccpm-system-LDAP_Account01
+        # network_connectivity_policy: System/ccpm-system-dns
+        # ntp_policy: System/ccpm-system-ntp
+        # port_policies:
+        #   - System/ccpm-system-ucs_domain-vcl-01-a
+        #   - System/ccpm-system-ucs_domain-vcl-01-b
+        # serial_numbers:
+        #   - unknown
+        #   - unknown
+        # snmp_policy: System/ccpm-system-snmp
+        # switch_control_policy: System/ccpm-system-swctrl
+        # system_qos_policy: System/ccpm-system-qos
+        # vlan_policies:
+        #   - System/ccpm-system-vlans_allvlans
+        # vsan_policies:
+        #   - System/vsan-a
+        #   - System/vsan-b
+      - name: test
+        action: No-op
+        attach_template: true
+        ucs_domain_profile_template: ccpm-system-ucs_domain-vcl
         serial_numbers:
           - unknown
-          - unknown
-        snmp_policy: System/ccpm-system-snmp
-        switch_control_policy: System/ccpm-system-swctrl
-        system_qos_policy: System/ccpm-system-qos
-        vlan_policies:
-          - System/ccpm-system-vlans_allvlans
-        vsan_policies:
-          - System/vsan-a
-          - System/vsan-b
+
+
+      # orig
+      # - name: ccpm-system-ucs_domain-vcl-01
+      #   description: Model Domain Profile 1
+      #   action: No-op
+      #   ldap_policy: System/ccpm-system-LDAP_Account01
+      #   network_connectivity_policy: System/ccpm-system-dns
+      #   ntp_policy: System/ccpm-system-ntp
+      #   port_policies:
+      #     - System/ccpm-system-ucs_domain-vcl-01-a
+      #     - System/ccpm-system-ucs_domain-vcl-01-b
+      #   serial_numbers:
+      #     - unknown
+      #     - unknown
+      #   snmp_policy: System/ccpm-system-snmp
+      #   switch_control_policy: System/ccpm-system-swctrl
+      #   system_qos_policy: System/ccpm-system-qos
+      #   vlan_policies:
+      #     - System/ccpm-system-vlans_allvlans
+      #   vsan_policies:
+      #     - System/vsan-a
+      #     - System/vsan-b

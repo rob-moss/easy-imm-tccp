@@ -2,22 +2,43 @@
 #=============================================
 #   Policies -> Fibre Channel - Variables
 #=============================================
+ # Original file (commented):
+ # ---
+ # #=============================================
+ # #   Policies -> Fibre Channel - Variables
+ # #=============================================
+ # System:
+ #   policies:
+ #     fibre_channel_adapter:
+ #       - adapter_template: Initiator
+ #         description: Initiator Fibre-Channel Adapter Policy
+ #         name: Initiator
+ #     fibre_channel_network:
+ #       - description: vsan-a Fibre-Channel Network Policy
+ #         name: vsan-a
+ #         vsan_id: 100
+ #       - description: vsan-b Fibre-Channel Network Policy
+ #         name: vsan-b
+ #         vsan_id: 200
+ #     fibre_channel_qos:
+ #       - description: fc-qos Fibre-Channel QoS Policy
+ #         name: fc-qos
 System:
   policies:
     fibre_channel_adapter:
-      - adapter_template: Initiator
+      - name: Initiator
         description: Initiator Fibre-Channel Adapter Policy
-        name: Initiator
+        adapter_template: Initiator
     fibre_channel_network:
-      - description: vsan-a Fibre-Channel Network Policy
-        name: vsan-a
+      - name: vsan-a
+        description: vsan-a Fibre-Channel Network Policy
         vsan_id: 100
-      - description: vsan-b Fibre-Channel Network Policy
-        name: vsan-b
+      - name: vsan-b
+        description: vsan-b Fibre-Channel Network Policy
         vsan_id: 200
     fibre_channel_qos:
-      - description: fc-qos Fibre-Channel QoS Policy
-        name: fc-qos
+      - name: fc-qos
+        description: fc-qos Fibre-Channel QoS Policy
     # fc_zone:
     #   - description: vsan-a FC Zone Policy
     #     fc_target_zoning_type: SIMT
