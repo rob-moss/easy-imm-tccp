@@ -5,6 +5,18 @@
 System:
   policies:
     vsan:
+      - name: ccpm-system-vsan_vcl-a
+        vsans:
+        - name: vsan-201
+          fcoe_vlan_id: 201
+          vsan_id: 201
+      - name: ccpm-system-vsan_vcl-b
+        vsans:
+        - name: vsan-202
+          fcoe_vlan_id: 202
+          vsan_id: 202
+
+
       - name: vsan-a
         vsans:
           - name: vsan-a

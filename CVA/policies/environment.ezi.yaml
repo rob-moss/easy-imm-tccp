@@ -29,22 +29,23 @@ System:
         power_redundancy: Grid
         power_restore: LastState
     thermal:
-      - name: '5108'
-        description: 5108 Thermal Policy
-        fan_control_mode: Balanced
-      - name: '9508'
-        description: 9508 Thermal Policy
-        fan_control_mode: Balanced
-      - name: server
-        description: server Thermal Policy
-        fan_control_mode: Balanced
-#
-      # - name: 'ccpm-system-thermal_5108'
-      #   description: 5108 Thermal Policy
-      #   fan_control_mode: Balanced
       - name: 'ccpm-system-thermal_9508'
         description: 9508 Thermal Policy
         fan_control_mode: Balanced
       - name: ccpm-system-thermal_server
         description: server Thermal Policy
         fan_control_mode: Balanced
+#       - name: '5108'
+#         description: 5108 Thermal Policy
+#         fan_control_mode: Balanced
+#       - name: '9508'
+#         description: 9508 Thermal Policy
+#         fan_control_mode: Balanced
+#       - name: server
+#         description: server Thermal Policy
+#         fan_control_mode: Balanced
+# #
+      # - name: 'ccpm-system-thermal_5108'
+      #   description: 5108 Thermal Policy
+      #   fan_control_mode: Balanced
+ 

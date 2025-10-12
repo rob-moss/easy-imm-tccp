@@ -15,3 +15,20 @@ System:
       default: ''
       domain: ''
       server: ''
+
+# CCPM
+# System:
+#   profiles:
+#     name_prefix:
+#       chassis: 'ccpm-'
+#       default: 'ccpm-'
+#       domain: 'ccpm-'
+#       server: 'ccpm-'
+#     name_suffix:
+#       chassis: ''
+#       default: ''
+#       domain: ''
+#       server: ''
+
+
+

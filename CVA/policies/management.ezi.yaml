@@ -5,12 +5,12 @@
 System:
   policies:
     imc_access:
-      - name: aci-kvm
-        description: aci-kvm IMC Access Policy
-        inband_ip_pool: aci-kvm-inband
-        inband_vlan_id: 101
-        ipv4_address_configuration: true
-        out_of_band_ip_pool: kvm-ooband
+      # - name: aci-kvm
+      #   description: aci-kvm IMC Access Policy
+      #   inband_ip_pool: aci-kvm-inband
+      #   inband_vlan_id: 101
+      #   ipv4_address_configuration: true
+      #   out_of_band_ip_pool: kvm-ooband
       - name: ccpm-system-imc_vcl_01
         description: IMC access policy for VCL
         inband_ip_pool: ccpm-system-ippool-vcl-01-inband_1
@@ -23,7 +23,7 @@ System:
         privilege: admin
     ldap:
       - name: ccpm-system-LDAP_Account01
-        description: RICH LDAP Policy
+        description: Account-01 LDAP Policy                     # TODO: update this with T LDAP settings
         base_settings:
           domain: rich.ciscolabs.com
         binding_parameters:
@@ -49,7 +49,7 @@ System:
         user_search_precedence: LocalUserDb
     local_user:
       - name: ccpm-system-users
-        description: users Local User Policy
+        description: Local User Policy                      # TODO: update this with T password policies
         password_properties:
           always_send_user_password: false
           enable_password_expiry: true
@@ -74,7 +74,7 @@ System:
         description: ntp NTP Policy
         enabled: true
         ntp_servers:
-          - 10.101.128.15
+          - 10.101.128.15                                       # TODO: update this with T NTP settings
           - 10.101.128.16
         timezone: Australia/Melbourne
     serial_over_lan:
@@ -88,7 +88,7 @@ System:
         description: snmp SNMP Policy
         snmp_port: 161
         snmp_trap_destinations:
-          - destination_address: 10.101.128.25                    # TODO: change this from rich lab linux host
+          - destination_address: 10.101.128.25                    # TODO: change this to T netcool
             port: 162
             user: snmpadmin
         snmp_users:
@@ -125,7 +125,7 @@ System:
     device_connector:
       - name: ccpm-system-devcon
         description: devcon Device Connector Policy
-        configuration_from_intersight_only: false
+        configuration_from_intersight_only: false                 # TODO: check this
     syslog:
       - name: ccpm-system-syslog
         description: syslog Syslog Policy

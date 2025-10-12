@@ -12,7 +12,16 @@ System:
         target_platform: FIAttached
         targets:
           - name: test1
+            description: Test SP - x210cM7 Virtualization Windows VCL
             serial_number: unknown
+            user_label: Test SP - x210cM7 Virtualization Windows VCL
+          # more blades under here -- can assign via slot or by serial number
+#           - name: test2
+#             description: Test SP2 - x210cM7 Virtualization Windows VCL
+#             user_label: testsp2
+#             pre_assign:
+#               chassis_id: 1
+#               slot_id: 1
 
 #       - ucs_server_profile_template: System/aci-M6-intel-virtual-tpm-M2-pxe
 #         action: No-op

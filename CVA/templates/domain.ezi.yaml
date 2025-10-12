@@ -6,22 +6,29 @@ System:
   templates:
     domain:
       - name: ccpm-system-ucs_domain-vcl
-        description: UCS Domain Profile Template
+        description: UCS Domain Profile Template VCL
         create_template: true
+        ldap_policy: System/ccpm-system-LDAP_Account01
         network_connectivity_policy: System/ccpm-system-dns
         ntp_policy: System/ccpm-system-ntp
         port_policies:
           - System/ccpm-system-ucs_domain-vcl-a
           - System/ccpm-system-ucs_domain-vcl-b
         snmp_policy: System/ccpm-system-snmp
-        switch_control_policy: System/ccpm-system-swctrl
+        switch_control_policy: System/ccpm-system-swctrl          # End Host Mode
         system_qos_policy: System/ccpm-system-qos
         vlan_policies:
-          - System/ccpm-system-vlans_allvlans_vcl                 # All System and Tenant VLANs in to the FI
+          - System/ccpm-system-vlans_allvlans_vcl                 # All System and Tenant VLANs for VCL
         vsan_policies:
-          - System/vsan-a
-          - System/vsan-b
-        ldap_policy: System/ccpm-system-LDAP_Account01
+          - System/ccpm-system-vsan_vcl-a                         # TODO: update this
+          - System/ccpm-system-vsan_vcl-b
+        # tags:
+        #   - key: "template"
+        #     value: "domain-vcl"
+        #   - key: "org"
+        #     value: "system"
+
+
 # org
       # - name: r143e
       #   description: UCS Domain Profile Template

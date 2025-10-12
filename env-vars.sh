@@ -16,7 +16,7 @@ export TF_VAR_binding_parameters_password="C1sc0123" # my LDAP user pass
 # For the CCO and firmware components
 export TF_VAR_cco_user="emailaddress@company.com" # my CCO user
 ### temporary CCO password for firmware policy
-export TF_VAR_cco_password='MyCCOP@ssword' # my CCO password
+export TF_VAR_cco_password='MyCCOP@ssword#1' # my CCO password
 ##############
 # # Uncomment below to read in CCO password at runtime instead of storing in plain text above
 # # Reading in CCO password so it's not in plain text in env-vars.sh

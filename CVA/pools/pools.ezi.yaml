@@ -61,8 +61,12 @@ System:
 
 #######################
 # MAC Address Pools
-
     mac:
+      - mac_blocks:
+          - from: "00:25:B5:0A:00:00"
+            size: 1024
+        name: ccpm-system-macpool_vcl_01
+
       - mac_blocks:
           - from: 00:25:B5:C1:10:00
             size: 255
@@ -99,13 +103,6 @@ System:
           - from: 00:25:B5:C1:00:00
             size: 255
         name: dual-fabric
-    # resource:
-    #   - description: SPQ-Blade
-    #     name: SPQ-Blade
-    #     server_pool_qualification_policies:
-    #       - SPQ-Blade
-    #     target_platform: FIAttached
-
 
 
 
@@ -114,18 +111,18 @@ System:
 ##################
 # UUID Pools
     uuid:
-      - description: uuid UUID Pool
-        name: uuid
-        prefix: 000025B5-C15C-0000
-        uuid_blocks:
-          - from: 25B5-000000000000
-            size: 255
-      - name: ccpm-system-pool_uuid_vcl
+      - name: ccpm-system-uuidpool
         description: UUID pool for VCL
         prefix: 000025B5-C15C-0000
         uuid_blocks:
           - from: "CAFE-000000000000"
             size: 1024
+      # - description: uuid UUID Pool
+      #   name: uuid
+      #   prefix: 000025B5-C15C-0000
+      #   uuid_blocks:
+      #     - from: 25B5-000000000000
+      #       size: 255
 
 ##################
 # WWNN Pools
@@ -147,6 +144,24 @@ System:
           - from: 20:00:00:25:B5:C1:B0:00
             size: 255
         name: wwpn-b
+
+
+
+
+
+# SPQ - not used
+    # resource:
+    #   - description: SPQ-Blade
+    #     name: SPQ-Blade
+    #     server_pool_qualification_policies:
+    #       - SPQ-Blade
+    #     target_platform: FIAttached
+
+
+
+
+
+
 # Infrastructure:
 #   pools:
 #     iqn:

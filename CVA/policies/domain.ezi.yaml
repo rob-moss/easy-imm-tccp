@@ -21,19 +21,19 @@ System:
         admin_state: Enabled
         mode: normal
     switch_control:
-      - name: ccpm-system-fcswitch
-        description: System Switch Control Policy
-        fabric_port_channel_vhba_reset: Disabled
-        mac_address_table_aging: Default
-        reserved_vlan_start_id: 3915
-        switching_mode_ethernet: end-host
-        switching_mode_fc: switch
-        udld_global_settings:
-          message_interval: 15
-          recovery_action: reset
-        vlan_port_count_optimization: false
+      # - name: ccpm-system-fcswitch
+      #   description: System Switch Control Policy - end-host mode for Eth and switch for FC
+      #   fabric_port_channel_vhba_reset: Disabled
+      #   mac_address_table_aging: Default
+      #   reserved_vlan_start_id: 3915
+      #   switching_mode_ethernet: end-host
+      #   switching_mode_fc: switch
+      #   udld_global_settings:
+      #     message_interval: 15
+      #     recovery_action: reset
+      #   vlan_port_count_optimization: false
       - name: ccpm-system-swctrl
-        description: System Switch Control Policy
+        description: Switch Control Policy - end-host mode for Eth and FC
         fabric_port_channel_vhba_reset: Disabled
         mac_address_table_aging: Default
         reserved_vlan_start_id: 3915
@@ -42,42 +42,8 @@ System:
         udld_global_settings:
           message_interval: 15
           recovery_action: reset
-        vlan_port_count_optimization: false
+        vlan_port_count_optimization: true
     system_qos:
-      - name: qos
-        description: qos System QoS Policy
-        jumbo_mtu: true
-        classes:
-          - cos: 255
-            packet_drop: true
-            priority: Best Effort
-            state: Enabled
-            weight: 5
-          - cos: 1
-            packet_drop: true
-            priority: Bronze
-            state: Enabled
-            weight: 7
-          - cos: 4
-            packet_drop: true
-            priority: Gold
-            state: Enabled
-            weight: 9
-          - cos: 3
-            packet_drop: false
-            priority: FC
-            state: Enabled
-            weight: 10
-          - cos: 5
-            packet_drop: false
-            priority: Platinum
-            state: Enabled
-            weight: 10
-          - cos: 2
-            packet_drop: true
-            priority: Silver
-            state: Enabled
-            weight: 8
       - name: ccpm-system-qos
         description: System qos System QoS Policy
         jumbo_mtu: true
@@ -112,6 +78,40 @@ System:
             priority: Silver
             state: Enabled
             weight: 8
+      # - name: qos
+      #   description: qos System QoS Policy
+      #   jumbo_mtu: true
+      #   classes:
+      #     - cos: 255
+      #       packet_drop: true
+      #       priority: Best Effort
+      #       state: Enabled
+      #       weight: 5
+      #     - cos: 1
+      #       packet_drop: true
+      #       priority: Bronze
+      #       state: Enabled
+      #       weight: 7
+      #     - cos: 4
+      #       packet_drop: true
+      #       priority: Gold
+      #       state: Enabled
+      #       weight: 9
+      #     - cos: 3
+      #       packet_drop: false
+      #       priority: FC
+      #       state: Enabled
+      #       weight: 10
+      #     - cos: 5
+      #       packet_drop: false
+      #       priority: Platinum
+      #       state: Enabled
+      #       weight: 10
+      #     - cos: 2
+      #       packet_drop: true
+      #       priority: Silver
+      #       state: Enabled
+      #       weight: 8
 
     # r143e original policies
     # flow_control:

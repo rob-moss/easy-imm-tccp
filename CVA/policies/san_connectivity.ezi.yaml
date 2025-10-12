@@ -5,17 +5,17 @@
 System:
   policies:
     san_connectivity:
-      - name: ccpm-system-scp
+      - name: ccpm-system-scp_vcl_01
         description: System SAN Connectivity Policy
         target_platform: FIAttached
         vhbas:
           - fibre_channel_adapter_policy: Initiator
             fibre_channel_network_policies:
-              - vsan-a
+              - vsan-a                                                        # TODO: update this
               - vsan-b
             fibre_channel_qos_policy: ccpm-system-fcqos
             names:
-              - vhba-a
+              - vhba-a                                                        # TODO: update this
               - vhba-b
             placement:
               pci_order:

@@ -23,3 +23,26 @@ System:
       uuid: ''
       wwnn: ''
       wwpn: ''
+
+
+# CCPM
+# System:
+#   pools:
+#     name_prefix:
+#       default: 'ccpm-'
+#       ip: 'ccpm-'
+#       iqn: 'ccpm-'
+#       mac: 'ccpm-'
+#       resource: 'ccpm-'
+#       uuid: 'ccpm-'
+#       wwnn: 'ccpm-'
+#       wwpn: 'ccpm-'
+#     name_suffix:
+#       default: ''
+#       ip: ''
+#       iqn: ''
+#       mac: ''
+#       resource: ''
+#       uuid: ''
+#       wwnn: ''
+#       wwpn: ''

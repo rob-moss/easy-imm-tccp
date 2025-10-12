@@ -66,44 +66,44 @@ System:
             slot: MLOM
           - device_name: UEFI
             device_type: uefi_shell
-      - name: ccpm-system-boot_vkvm_m2_pxe_uefi
-        description: Boot from vKVM, M.2, PXE then UEFI Shell
-        boot_devices:
-          - device_name: KVM-DVD
-            device_type: virtual_media
-            subtype: kvm-mapped-dvd
-          - device_name: M2
-            device_type: local_disk
-            slot: MSTOR-RAID
-          - device_name: PXE
-            device_type: pxe_boot
-            interface_name: mgmt-a
-            slot: MLOM
-          - device_name: UEFI
-            device_type: uefi_shell
-        boot_mode: Uefi
-        enable_secure_boot: true
+      # - name: ccpm-system-boot_vkvm_m2_pxe
+      #   description: Boot from vKVM, M.2, PXE then UEFI Shell
+      #   boot_devices:
+      #     - device_name: KVM-DVD
+      #       device_type: virtual_media
+      #       subtype: kvm-mapped-dvd
+      #     - device_name: M2
+      #       device_type: local_disk
+      #       slot: MSTOR-RAID
+      #     - device_name: PXE
+      #       device_type: pxe_boot
+      #       interface_name: mgmt-a
+      #       slot: MLOM
+      #     - device_name: UEFI
+      #       device_type: uefi_shell
+      #   boot_mode: Uefi
+      #   enable_secure_boot: true
     firmware:
       - name: ccpm-system-firmware_5.2
-        description: UCS x210c 5.2(2.240053) firmware policy
+        description: UCS x210c 5.2(2.240053) firmware policy            # TODO: update this to latest recommended
         target_platform: FIAttached
         model_bundle_version:
           - firmware_version: 5.2(2.240053)
             server_models:
               - UCSX-210C-M7
-      - name: fw-domain-servers
-        description: fw-domain-servers Firmware Policy
-        target_platform: FIAttached
-        model_bundle_version:
-          - firmware_version: 5.2(2.240053)
-            server_models:
-              - UCSX-210C-M7
-          # - firmware_version: 5.2(0.230127)
-          #   server_models:
-          #     - UCSB-B200-M5
-          # - firmware_version: 4.3(2.240009)
-          #   server_models:
-          #     - UCSC-C240-M5
+      # - name: fw-domain-servers
+      #   description: fw-domain-servers Firmware Policy
+      #   target_platform: FIAttached
+      #   model_bundle_version:
+      #     - firmware_version: 5.2(2.240053)
+      #       server_models:
+      #         - UCSX-210C-M7
+      #     # - firmware_version: 5.2(0.230127)
+      #     #   server_models:
+      #     #     - UCSB-B200-M5
+      #     # - firmware_version: 4.3(2.240009)
+      #     #   server_models:
+      #     #     - UCSC-C240-M5
     firmware_authenticate:
       cco_password: 1
       cco_user: 1
@@ -113,9 +113,9 @@ System:
       - name: ccpm-system-memory
         dimm_blocklisting: true
     scrub:
-      - name: scrub_default
-        bios: false
-        disk: false
+      # - name: scrub_default
+      #   bios: false
+      #   disk: false
       - name: ccpm-system-noscrub
         description: Disk scrub policy - no disk or bios scrub
         bios: false
@@ -125,10 +125,10 @@ System:
         bios: true
         disk: true
     virtual_media:
-      - name: vmedia
-        description: vmedia Virtual Media Policy
-        enable_low_power_usb: true
-        enable_virtual_media_encryption: true
+      # - name: vmedia
+      #   description: vmedia Virtual Media Policy
+      #   enable_low_power_usb: true
+      #   enable_virtual_media_encryption: true
       - name: ccpm-system-vmedia
         description: vmedia Virtual Media Policy
         enable_low_power_usb: true
