@@ -5,7 +5,7 @@
 System:
   policies:
     multicast:
-      - name: mcast
+      # - name: mcast
       - name: ccpm-system-mcast
         description: Multicast Policy
         snooping_state: Enabled

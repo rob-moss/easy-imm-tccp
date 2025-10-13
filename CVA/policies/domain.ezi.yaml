@@ -5,22 +5,35 @@
 System:
   policies:
     flow_control:
-      - name: ccpm-system-flow-ctrl
+      - name: ccpm-system-flow_control
         description: flow-ctrl Flow Control Policy
         priority: auto
         receive: Disabled
         send: Disabled
     link_aggregation:
-      - name: ccpm-system-link-agg
+      - name: ccpm-system-link_agg
         description: System Link Aggregation Policy
         lacp_rate: normal
         suspend_individual: false
     link_control:
-      - name: ccpm-system-link-ctrl
+      - name: ccpm-system-link_control
         description: System Link Control Policy
         admin_state: Enabled
         mode: normal
     switch_control:
+      - name: ccpm-system-sw_control
+        description: Switch Control Policy - end-host mode for Eth and FC
+        fabric_port_channel_vhba_reset: Disabled
+        mac_address_table_aging: Default
+        reserved_vlan_start_id: 3915
+        switching_mode_ethernet: end-host
+        switching_mode_fc: end-host
+        udld_global_settings:
+          message_interval: 15
+          recovery_action: reset
+        vlan_port_count_optimization: false
+#        enable_jumbo_frames: false             # This does not exist in 1.0.68
+#
       # - name: ccpm-system-fcswitch
       #   description: System Switch Control Policy - end-host mode for Eth and switch for FC
       #   fabric_port_channel_vhba_reset: Disabled
@@ -32,19 +45,8 @@ System:
       #     message_interval: 15
       #     recovery_action: reset
       #   vlan_port_count_optimization: false
-      - name: ccpm-system-swctrl
-        description: Switch Control Policy - end-host mode for Eth and FC
-        fabric_port_channel_vhba_reset: Disabled
-        mac_address_table_aging: Default
-        reserved_vlan_start_id: 3915
-        switching_mode_ethernet: end-host
-        switching_mode_fc: end-host
-        udld_global_settings:
-          message_interval: 15
-          recovery_action: reset
-        vlan_port_count_optimization: true
     system_qos:
-      - name: ccpm-system-qos
+      - name: ccpm-system-eth_qos
         description: System qos System QoS Policy
         jumbo_mtu: true
         classes:
@@ -118,14 +120,14 @@ System:
     #   - description: flow-ctrl Flow Control Policy
     #     name: flow-ctrl
     # link_aggregation:
-    #   - description: ccpm-system-link-agg Link Aggregation Policy
-    #     name: ccpm-system-link-agg
+    #   - description: ccpm-system-link_agg Link Aggregation Policy
+    #     name: ccpm-system-link_agg
     # link_control:
-    #   - description: ccpm-system-link-ctrl Link Control Policy
-    #     name: ccpm-system-link-ctrl
+    #   - description: ccpm-system-link_control Link Control Policy
+    #     name: ccpm-system-link_control
     # switch_control:
-    #   - description: ccpm-system-swctrl Switch Control Policy
-    #     name: ccpm-system-swctrl
+    #   - description: ccpm-system-sw_control Switch Control Policy
+    #     name: ccpm-system-sw_control
     #     switching_mode_ethernet: end-host
     #     switching_mode_fc: end-host
     #     vlan_port_count_optimization: false

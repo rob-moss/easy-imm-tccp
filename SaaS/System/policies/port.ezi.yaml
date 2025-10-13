@@ -17,8 +17,8 @@ System:
             interfaces:
               - port_id: 105
               - port_id: 107
-            link_aggregation_policy: ccpm-system-link-agg
-            link_control_policy: ccpm-system-link-ctrl
+            link_aggregation_policy: ccpm-system-link_agg
+            link_control_policy: ccpm-system-link_control
             pc_ids:
               - 105
               - 105

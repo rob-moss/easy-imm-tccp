@@ -15,8 +15,8 @@ System:
           - System/ccpm-system-ucs_domain-vcl-a
           - System/ccpm-system-ucs_domain-vcl-b
         snmp_policy: System/ccpm-system-snmp
-        switch_control_policy: System/ccpm-system-swctrl          # End Host Mode
-        system_qos_policy: System/ccpm-system-qos
+        switch_control_policy: System/ccpm-system-sw_control          # End Host Mode
+        system_qos_policy: System/ccpm-system-eth_qos
         vlan_policies:
           - System/ccpm-system-vlans_allvlans_vcl                 # All System and Tenant VLANs for VCL
         vsan_policies:
@@ -29,6 +29,13 @@ System:
         #     value: "system"
 
 
+
+
+
+
+
+
+#####################
 # org
       # - name: r143e
       #   description: UCS Domain Profile Template
@@ -39,8 +46,8 @@ System:
       #     - System/r143e-1-a
       #     - System/r143e-1-b
       #   snmp_policy: System/ccpm-system-snmp
-      #   switch_control_policy: System/ccpm-system-swctrl
-      #   system_qos_policy: System/ccpm-system-qos
+      #   switch_control_policy: System/ccpm-system-sw_control
+      #   system_qos_policy: System/ccpm-system-eth_qos
       #   vlan_policies:
       #     - System/ccpm-system-vlans_allvlans                         # All System and Tenant VLANs in to the FI
       #   vsan_policies:

@@ -21,6 +21,13 @@ System:
           - unknown
 
 
+
+
+
+
+
+
+######################
       # orig -- full defined, not from template
       # - name: ccpm-system-ucs_domain-vcl-01
       #   description: Model Domain Profile 1
@@ -35,8 +42,8 @@ System:
       #     - unknown
       #     - unknown
       #   snmp_policy: System/ccpm-system-snmp
-      #   switch_control_policy: System/ccpm-system-swctrl
-      #   system_qos_policy: System/ccpm-system-qos
+      #   switch_control_policy: System/ccpm-system-sw_control
+      #   system_qos_policy: System/ccpm-system-eth_qos
       #   vlan_policies:
       #     - System/ccpm-system-vlans_allvlans
       #   vsan_policies:

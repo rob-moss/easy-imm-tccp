@@ -30,15 +30,16 @@ System:
       #   serial_port_aenable: enabled
       #   terminal_type: vt100
       #   txt_support: enabled
-      - name: virtualization-m7-intel-tpm
-        description: virtualization-m7-tpm BIOS Policy
-        baud_rate: '115200'
-        bios_template: Virtualization-M7-Intel-Tpm
-        boot_performance_mode: Max Performance
-        console_redirection: com-0
-        serial_port_aenable: enabled
-        terminal_type: vt100
-        txt_support: enabled
+#
+      # - name: virtualization-m7-intel-tpm
+      #   description: virtualization-m7-tpm BIOS Policy
+      #   baud_rate: '115200'
+      #   bios_template: Virtualization-M7-Intel-Tpm
+      #   boot_performance_mode: Max Performance
+      #   console_redirection: com-0
+      #   serial_port_aenable: enabled
+      #   terminal_type: vt100
+      #   txt_support: enabled
       - name: ccpm-system-bios_m7_virt
         description: M7 Server Virtualisation BIOS Policy
         baud_rate: '115200'                                                 # Should match SOL Baud rate
@@ -104,12 +105,15 @@ System:
       #     # - firmware_version: 4.3(2.240009)
       #     #   server_models:
       #     #     - UCSC-C240-M5
-    firmware_authenticate:
-      cco_password: 1
-      cco_user: 1
+###############################
+# Firmware
+    # firmware_authenticate:
+    #   cco_password: 1
+    #   cco_user: 1
+################################
     memory:
-      - name: memory_default
-        dimm_blocklisting: false
+      # - name: memory_default
+      #   dimm_blocklisting: false
       - name: ccpm-system-memory
         dimm_blocklisting: true
     scrub:

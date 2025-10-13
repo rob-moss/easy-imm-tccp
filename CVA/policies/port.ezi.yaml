@@ -10,38 +10,37 @@ System:
         names:
           - ccpm-system-ucs_domain-vcl-a
           - ccpm-system-ucs_domain-vcl-b
-        port_channel_ethernet_uplinks:
+        port_channel_ethernet_uplinks:                    # 1-28 for server chassis, 29-36 for uplinks
           - admin_speed: Auto
             ethernet_network_group_policies:
               - aci-uplink
-            flow_control_policy: ccpm-system-flow-ctrl
+            flow_control_policy: ccpm-system-flow_control
             interfaces:
               - port_id: 29
               - port_id: 30
               - port_id: 31
               - port_id: 32
-            link_aggregation_policy: ccpm-system-link-agg
-            link_control_policy: ccpm-system-link-ctrl
+            link_aggregation_policy: ccpm-system-link_agg
+            link_control_policy: ccpm-system-link_control
             pc_ids:
               - 101
               - 102
-        port_channel_fc_uplinks:
-          - admin_speed: 32Gbps
-            interfaces:
-              - port_id: 36
-            pc_ids:
-              - 201
-              - 202
-            vsan_ids:
-              - 100
-              - 200
-        port_modes:
-          - custom_mode: FibreChannel
-            port_list:
-              - 1
-              - 48
         port_role_servers:
           - port_list: 1-28                                 # 1-28 for server chassis
+        # port_channel_fc_uplinks:
+        #   - admin_speed: 32Gbps
+        #     interfaces:
+        #       - port_id: 36
+        #     pc_ids:
+        #       - 201
+        #       - 202
+        #     vsan_ids:
+        #       - 100
+        #       - 200
+        port_modes:
+          - custom_mode: BreakoutFibreChannel32G
+            port_list:
+              - 36
 
     # 6454 working example
       # - device_model: UCS-FI-6454
@@ -52,12 +51,12 @@ System:
       #     - admin_speed: Auto
       #       ethernet_network_group_policies:
       #         - aci-uplink
-      #       flow_control_policy: ccpm-system-flow-ctrl
+      #       flow_control_policy: ccpm-system-flow_control
       #       interfaces:
       #         - port_id: 53
       #         - port_id: 54
-      #       link_aggregation_policy: ccpm-system-link-agg
-      #       link_control_policy: ccpm-system-link-ctrl
+      #       link_aggregation_policy: ccpm-system-link_agg
+      #       link_control_policy: ccpm-system-link_control
       #       pc_ids:
       #         - 53
       #         - 53

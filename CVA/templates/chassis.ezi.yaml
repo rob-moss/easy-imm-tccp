@@ -1,10 +1,25 @@
----
-#========================================
-#   Templates -> Chassis - Variables
-#========================================
-System:
-  templates:
-    chassis:
+# ---
+# #========================================
+# #   Templates -> Chassis - Variables
+# #========================================
+# System:
+#   templates:
+#     chassis:
+
+#       - name: ccpm-system-chassis_9508-vcl
+#         description: 9508 Chassis Profile Template
+#         create_template: true
+#         imc_access_policy: System/ccpm-system-imc_vcl_01
+#         power_policy: System/ccpm-system-power_9508
+#         snmp_policy: System/ccpm-system-snmp
+#         thermal_policy: System/ccpm-system-thermal_9508
+#         # tags:
+#         #   - key: "template"
+#         #     value: "chas-9508-vcl"
+#         #   - key: "org"
+#         #     value: "system"
+
+#####################
       # Original from easyimm
       # - create_template: true
       #   description: 9508 Chassis Profile Template
@@ -14,15 +29,3 @@ System:
       #   snmp_policy: snmp
       #   thermal_policy: '9508'
 #
-      - name: ccpm-system-chassis_9508-vcl
-        description: 9508 Chassis Profile Template
-        create_template: true
-        imc_access_policy: System/ccpm-system-imc_vcl_01
-        power_policy: System/ccpm-system-power_9508
-        snmp_policy: System/ccpm-system-snmp
-        thermal_policy: System/ccpm-system-thermal_9508
-        # tags:
-        #   - key: "template"
-        #     value: "chas-9508-vcl"
-        #   - key: "org"
-        #     value: "system"

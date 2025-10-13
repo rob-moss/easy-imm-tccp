@@ -10,7 +10,9 @@ System:
     - puma
     - cmnsh
     - vmcp
-
+  # tags:
+  #   - key: "org"
+  #     value: "system"
 
 puma:
   create_organization: true

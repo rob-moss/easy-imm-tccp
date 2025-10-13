@@ -8,14 +8,14 @@ System:
       - description: flow-ctrl Flow Control Policy
         name: flow-ctrl
     link_aggregation:
-      - description: ccpm-system-link-agg Link Aggregation Policy
-        name: ccpm-system-link-agg
+      - description: ccpm-system-link_agg Link Aggregation Policy
+        name: ccpm-system-link_agg
     link_control:
-      - description: ccpm-system-link-ctrl Link Control Policy
-        name: ccpm-system-link-ctrl
+      - description: ccpm-system-link_control Link Control Policy
+        name: ccpm-system-link_control
     switch_control:
-      - description: ccpm-system-swctrl Switch Control Policy
-        name: ccpm-system-swctrl
+      - description: ccpm-system-sw_control Switch Control Policy
+        name: ccpm-system-sw_control
         switching_mode_ethernet: end-host
         switching_mode_fc: end-host
         vlan_port_count_optimization: false

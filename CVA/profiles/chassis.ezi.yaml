@@ -1,10 +1,36 @@
----
-#=======================================
-#   Profiles -> Chassis - Variables
-#=======================================
-System:
-  profiles:
-    chassis:
+# ---
+# #=======================================
+# #   Profiles -> Chassis - Variables
+# #=======================================
+# System:
+#   profiles:
+#     chassis:
+# # try this by using just the one chassis profile template
+#       - action: No-op
+#         ucs_chassis_profile_template: ccpm-system-chassis_9508-vcl        # Use this Chas Template to deploy the Profiles below
+#         targets:
+#           - name: ccpm-system-chassis-vcl-01
+#             description: Model Clayton POD1
+#             serial_number: unknown
+#           - name: ccpm-system-chassis-vcl-02
+#             description: Model Clayton POD2
+#             serial_number: unknown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##############
       # - action: No-op
       #   imc_access_policy: System/ccpm-system-vkvm
       #   power_policy: System/9508
@@ -25,14 +51,3 @@ System:
       #       serial_number: unknown
       #   thermal_policy: System/ccpm-system-thermal_9508
       #   ucs_chassis_profile_template: cpm-system-chassis_9508
-
-# try this by using just the one chassis profile template
-      - action: No-op
-        ucs_chassis_profile_template: ccpm-system-chassis_9508-vcl        # Use this Chas Template to deploy the Profiles below
-        targets:
-          - name: ccpm-system-chassis-vcl-01
-            description: Model Clayton POD1
-            serial_number: unknown
-          - name: ccpm-system-chassis-vcl-02
-            description: Model Clayton POD2
-            serial_number: unknown

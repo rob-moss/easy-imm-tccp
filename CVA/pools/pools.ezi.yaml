@@ -8,8 +8,8 @@ System:
       - name: ccpm-system-ippool-vcl-01-inband_1
         description: Model Clayton Inband IP Pool 1
         ipv4_blocks:
-          - from: 10.242.62.10                          # .1 + 9
-            size: 245                                   # 255-10. First 10 are reserved
+          - from: 10.242.62.10                          # .1 + 9 (1-10 reserved)
+            size: 106                                   # 126-10. First 10 are reserved
         ipv4_configuration:
           gateway: 10.242.62.1                          
           netmask: 255.255.255.128                      # /25
@@ -18,8 +18,8 @@ System:
       - name: ccpm-system-ippool-vcl-01-inband_2
         description: Model Clayton Inband IP Pool 2
         ipv4_blocks:
-          - from: 10.242.62.139                         # .129 + 9 reserved
-            size: 245                                   # 255-10. First 10 are reserved
+          - from: 10.242.62.139                         # .129 + 9 (129-138 reserved))
+            size: 106                                   # 126-10. First 10 are reserved
         ipv4_configuration:
           gateway: 10.242.62.129
           netmask: 255.255.255.128                      # /25
@@ -29,7 +29,7 @@ System:
         description: Model Clayton OOB IP Pool 1
         ipv4_blocks:
           - from: 10.242.63.10
-            size: 502                                   # 512-10. First 9 are reserved
+            size: 244                                   # 254-9. First 10 are reserved
         ipv4_configuration:
           gateway: 10.242.63.1
           netmask: 255.255.255.0                        # /24
